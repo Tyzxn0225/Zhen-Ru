@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://b1dexpek27lg5"]
+
+[ext_resource type="Script" uid="uid://dj4v8u1bla0xo" path="res://Scenes/UI/equipment_panel/equipment_slot.gd" id="1_scv8q"]
+[ext_resource type="Texture2D" uid="uid://bf3kx0rce6k0x" path="res://Sprites/Equipment/placeholder_helmet.png" id="2_be1fh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jnk8h"]
+bg_color = Color(0.28627452, 0.30588236, 0.36862746, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8665901, 0.8665901, 0.8665899, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3pua"]
+bg_color = Color(0.19491002, 0.20972922, 0.25725624, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8665901, 0.8665901, 0.8665899, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mbdki"]
+bg_color = Color(0.49846238, 0.5240047, 0.6047014, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8665901, 0.8665901, 0.8665899, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="EquipmentSlot" type="Button" unique_id=1010363266]
+custom_minimum_size = Vector2(40, 40)
+theme_override_styles/normal = SubResource("StyleBoxFlat_jnk8h")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g3pua")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mbdki")
+script = ExtResource("1_scv8q")
+
+[node name="ItemIcon" type="TextureRect" parent="." unique_id=1441154763]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_be1fh")
+
+[node name="Selector" type="TextureRect" parent="." unique_id=2010363266]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_filter = 1
+stretch_mode = 2
+texture = ExtResource("2_be1fh")

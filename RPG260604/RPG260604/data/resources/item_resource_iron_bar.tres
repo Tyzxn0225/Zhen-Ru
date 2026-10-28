@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://res001iron001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txironbar001" path="res://Sprites/Items/Resource/BarIron.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+is_consumable = false
+max_stack = 50
+icon = ExtResource("1_qh54l")
+id = "resource_iron_bar"
+name = "铁锭"
+description = "坚硬的铁锭，是制作武器和防具的基础材料。"
+price = 25
+metadata/_custom_type_script = "uid://oady46xvsj7m"

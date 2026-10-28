@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cpck4aj5c7b81"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://co5mox4jwutts" path="res://Sprites/Items/Food/Onigiri.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+value = 25.0
+icon = ExtResource("1_qh54l")
+id = "food_onigiri"
+name = "饭团"
+description = "简单的饭团，恢复25点体力。"
+price = 3
+metadata/_custom_type_script = "uid://oady46xvsj7m"

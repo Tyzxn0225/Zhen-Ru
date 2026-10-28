@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://abc123yakitori001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txyakitori001" path="res://Sprites/Items/Food/Yakitori.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 0
+is_consumable = true
+value = 60.0
+max_stack = 15
+icon = ExtResource("1_qh54l")
+id = "food_yakitori"
+name = "烤鸡肉串"
+description = "香气四溢的烤鸡肉串，恢复60点体力。"
+price = 10
+metadata/_custom_type_script = "uid://oady46xvsj7m"

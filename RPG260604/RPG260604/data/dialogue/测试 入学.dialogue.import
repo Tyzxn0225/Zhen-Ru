@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cyoqpfieqphxc"
+path="res://.godot/imported/测试 入学.dialogue-7fd2a160e92c6541e7878471dce3b612.tres"
+
+[deps]
+
+source_file="res://data/dialogue/测试 入学.dialogue"
+dest_files=["res://.godot/imported/测试 入学.dialogue-7fd2a160e92c6541e7878471dce3b612.tres"]
+
+[params]
+
+defaults=true

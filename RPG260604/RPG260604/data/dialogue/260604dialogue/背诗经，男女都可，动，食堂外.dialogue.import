@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://3o6afni1b4i"
+path="res://.godot/imported/背诗经，男女都可，动，食堂外.dialogue-c086c2f49470ee357166ed9d5056c17e.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/背诗经，男女都可，动，食堂外.dialogue"
+dest_files=["res://.godot/imported/背诗经，男女都可，动，食堂外.dialogue-c086c2f49470ee357166ed9d5056c17e.tres"]
+
+[params]
+
+defaults=true

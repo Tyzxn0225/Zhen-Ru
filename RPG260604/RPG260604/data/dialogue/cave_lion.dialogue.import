@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bvcavelion001"
+path="res://.godot/imported/cave_lion.dialogue-1630dfba108074a5a010ae2b8befe872.tres"
+
+[deps]
+
+source_file="res://data/dialogue/cave_lion.dialogue"
+dest_files=["res://.godot/imported/cave_lion.dialogue-1630dfba108074a5a010ae2b8befe872.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bvdemongrn01"
+path="res://.godot/imported/demon_green.dialogue-8510ee2791fad951d774ac1559c2b679.tres"
+
+[deps]
+
+source_file="res://data/dialogue/demon_green.dialogue"
+dest_files=["res://.godot/imported/demon_green.dialogue-8510ee2791fad951d774ac1559c2b679.tres"]
+
+[params]
+
+defaults=true

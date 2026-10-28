@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxvpscmdeaeoj"]
+
+[ext_resource type="Texture2D" uid="uid://dbfg8jvijdjdb" path="res://Sprites/Items/Treasure/GoldCoin.png" id="1_k5vhm"]
+[ext_resource type="Script" uid="uid://dpigrx7tqtmnv" path="res://Scenes/UI/inventory_panel/inventory_panel.gd" id="1_qfp0e"]
+[ext_resource type="PackedScene" uid="uid://e3vaxj3t4epu" path="res://Scenes/UI/inventory_panel/inventory_slot.tscn" id="3_5snhy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1xeu"]
+bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.101960786, 0.11372549, 0.14901961, 1)
+shadow_size = 2
+shadow_offset = Vector2(4, 4)
+
+[node name="InventoryPanel" type="PanelContainer"]
+visible = false
+custom_minimum_size = Vector2(215, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_t1xeu")
+script = ExtResource("1_qfp0e")
+grabbed_slot = NodePath("../../GrabbedSlot")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "背包"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBox"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.8666667, 0.8666667, 0.8666667, 0.14901961)
+
+[node name="HBoxCoin" type="HBoxContainer" parent="MarginContainer/VBox"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBox/HBoxCoin"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("1_k5vhm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBox/HBoxCoin"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "3000"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBox"]
+custom_minimum_size = Vector2(298, 380)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="Container" type="GridContainer" parent="MarginContainer/VBox/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 4
+
+[node name="Space2" type="Control" parent="MarginContainer/VBox"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2

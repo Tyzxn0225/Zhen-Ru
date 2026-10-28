@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctpiat3f6kadb"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t2lb1"]
+load_path = "res://.godot/imported/红沙发三人.png-17688b98ece3a1d64bb82e49da0b579b.ctex"
+
+[node name="红沙发" type="StaticBody2D"]
+
+[node name="红沙发三人" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(264, 133.71387)
+scale = Vector2(0.5535679, 0.5535679)
+texture = SubResource("CompressedTexture2D_t2lb1")
+offset = Vector2(0, -18.580566)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(264, 133.71387)
+scale = Vector2(0.55356777, 0.55356777)
+polygon = PackedVector2Array(35, -48.580566, -37, -48.580566, -37, -46.380566, -38.8, -44.580566, -40.2, -44.580566, -42, -41.080566, -42, -32.280567, -45.9, -27.580566, -46, -7.780567, 45.5, -8.580566, 46, -27.380566, 41, -32.380566, 41, -41.480568, 35, -46.580566)

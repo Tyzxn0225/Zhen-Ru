@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://abc123fish001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txfish001" path="res://Sprites/Items/Food/Fish.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 0
+is_consumable = true
+value = 30.0
+max_stack = 20
+icon = ExtResource("1_qh54l")
+id = "food_fish"
+name = "烤鱼"
+description = "新鲜烤制的鱼肉，恢复30点体力。"
+price = 5
+metadata/_custom_type_script = "uid://oady46xvsj7m"

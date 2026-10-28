@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bc123nut001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txnut001" path="res://Sprites/Items/Food/Nut.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 0
+is_consumable = true
+value = 15.0
+max_stack = 30
+icon = ExtResource("1_qh54l")
+id = "food_nut"
+name = "坚果"
+description = "香脆的坚果，恢复15点体力。"
+price = 2
+metadata/_custom_type_script = "uid://oady46xvsj7m"

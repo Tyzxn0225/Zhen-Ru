@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbbnr4360k4b5"]
+
+[ext_resource type="Script" uid="uid://dcoin00000001" path="res://Microgame/platformerPack/coin.gd" id="1_8o2u3"]
+[ext_resource type="Texture2D" uid="uid://dbfg8jvijdjdb" path="res://Sprites/Items/Treasure/GoldCoin.png" id="2_8h1sl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_867nt"]
+size = Vector2(16, 16)
+
+[node name="coin" type="Area2D"]
+scale = Vector2(1.5, 1.5)
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_8o2u3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.9999995, -3.9999995)
+scale = Vector2(2.2857144, 2.2857144)
+texture = ExtResource("2_8h1sl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -4)
+shape = SubResource("RectangleShape2D_867nt")

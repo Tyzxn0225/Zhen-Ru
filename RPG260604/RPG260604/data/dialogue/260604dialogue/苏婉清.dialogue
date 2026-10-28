@@ -1,0 +1,31 @@
+~ start
+match GameData.苏婉清_meet_count
+	when == 0
+		set GameData.苏婉清_meet_count = 0
+		do Refs.current_npc.face_direction("up") 
+		Player: 门关了……怎么进去呢？
+		- 问问那边两位吧(靠近搭话)
+		学姐: （用笔尖点了点纸面）照片放大，标题位置要跟着动，回去逐项核对。——
+		Player: (好像没有注意到我？)
+		do GameData.add_campus_points(20)
+		do UIManager.show_timed_hint("获得","20校园活动分", 2.0)
+		do Refs.current_npc.release_face_direction()
+		=> END
+		
+	when == 1
+		苏婉清: Player同学。报社招新在下周，你要是有兴趣，届时再正式通知。
+		苏婉清: 不过你要是感兴趣，可以试试这个整理工作。
+		- 好的
+		苏婉清: 这有许多碎片化的文档素材需要整合。
+		苏婉清: 小心整理超时，让素材受损了！
+		set GameData.pending_dialogue_resource_path = "res://data/dialogue/260604dialogue/苏婉清.dialogue"
+		set GameData.pending_dialogue_title = "puzzle_return"
+		do UIManager.switch_scene_with_transition("res://Microgame/Games/Game1PuzzleAll/scenes/ui/StartMenu1.tscn",null,"")
+		=> END
+		- 额，算了吧
+		=> END
+
+~ puzzle_return
+苏婉清: 还不赖。
+Player: 嘿嘿。
+=> END

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dhj51xfpchddb"
+path="res://.godot/imported/周先生.dialogue-ed73dd8330ba8ae82a662a18cb3a0007.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/周先生.dialogue"
+dest_files=["res://.godot/imported/周先生.dialogue-ed73dd8330ba8ae82a662a18cb3a0007.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://sxctpdsqan60"
+path="res://.godot/imported/序章独白.dialogue-bde6a3796ba069822efb0e9b98e14866.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/序章独白.dialogue"
+dest_files=["res://.godot/imported/序章独白.dialogue-bde6a3796ba069822efb0e9b98e14866.tres"]
+
+[params]
+
+defaults=true

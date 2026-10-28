@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="QuestData" load_steps=5 format=3 uid="uid://66dvdn5jcfv0"]
+
+[ext_resource type="Script" uid="uid://bbsr02p0yfin0" path="res://data/quests/quest_data.gd" id="1_halk3"]
+[ext_resource type="Script" uid="uid://b5ooyo7pj8m2c" path="res://data/quests/quest_stage_data.gd" id="2_8luit"]
+
+[sub_resource type="Resource" id="Resource_p1qwi"]
+script = ExtResource("2_8luit")
+stage_name = "阶段 1"
+hint = "去食堂找大师傅核对账"
+map_marker_id = "写生的同学"
+metadata/_custom_type_script = "uid://b5ooyo7pj8m2c"
+
+[sub_resource type="Resource" id="Resource_tcp0o"]
+script = ExtResource("2_8luit")
+stage_name = "阶段 2"
+hint = "确认烦恼的同学"
+map_marker_id = "烦恼的同学"
+metadata/_custom_type_script = "uid://b5ooyo7pj8m2c"
+
+[resource]
+script = ExtResource("1_halk3")
+quest_id = "测试任务1"
+title = "11111"
+description = "2222222222222222222222"
+stages = Array[ExtResource("2_8luit")]([SubResource("Resource_p1qwi"), SubResource("Resource_tcp0o")])
+metadata/_custom_type_script = "uid://bbsr02p0yfin0"

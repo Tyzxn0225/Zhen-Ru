@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dancdxtgi3k6e"]
+
+[ext_resource type="AudioStream" uid="uid://bwcytdxpxik62" path="res://Microgame/Games/Game3Shoot/assets/sounds/BGM.ogg" id="1_h3p0g"]
+
+[node name="BGM" type="AudioStreamPlayer" unique_id=276167924]
+stream = ExtResource("1_h3p0g")
+volume_db = -25.0
+autoplay = true

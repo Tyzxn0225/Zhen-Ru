@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bryj2dvqhogkn"
+path="res://.godot/imported/买糖葫芦，老年男，不动，校门口.dialogue-ee6cc36aaebe565598e11214c784faaf.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/买糖葫芦，老年男，不动，校门口.dialogue"
+dest_files=["res://.godot/imported/买糖葫芦，老年男，不动，校门口.dialogue-ee6cc36aaebe565598e11214c784faaf.tres"]
+
+[params]
+
+defaults=true

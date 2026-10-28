@@ -1,0 +1,55 @@
+[gd_scene format=4 uid="uid://b2578ihlb37er"]
+
+[ext_resource type="Script" uid="uid://drmgmw5pp38j6" path="res://Microgame/Games/Game1PuzzleAll/scripts/ui/GameOver1.gd" id="1_wef8a"]
+[ext_resource type="Texture2D" uid="uid://fbfuvahnc4be" path="res://Microgame/Games/Game1PuzzleAll/assets/images/gameover.png" id="2_6mhtt"]
+[ext_resource type="FontFile" uid="uid://baoboilecx6mo" path="res://Microgame/Games/Game2PuzzleMap/assets/fonts/fusion-pixel-12px-monospaced-zh_hans.ttf" id="2_amqmn"]
+
+[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_a5jl1"]
+data = PackedByteArray("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")
+format = 3
+mix_rate = 22050
+tags = {
+"date": "2000-01-19",
+"encoder": "Sound Forge 4.0;Sound Forge 4.5",
+"engineer": "Jason Hayes"
+}
+
+[node name="GameOver" type="Control" unique_id=221252678]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1, 1.1)
+script = ExtResource("1_wef8a")
+
+[node name="GameOverImage" type="TextureRect" parent="." unique_id=638661185]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -200.0
+offset_right = -320.00024
+offset_bottom = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_6mhtt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BackButton" type="Button" parent="." unique_id=117535080]
+layout_mode = 0
+offset_left = 2030.0
+offset_top = 100.0
+offset_right = 2238.0
+offset_bottom = 209.0
+theme_override_fonts/font = ExtResource("2_amqmn")
+theme_override_font_sizes/font_size = 100
+text = "返回"
+
+[node name="PressAudioPlayer" type="AudioStreamPlayer" parent="BackButton" unique_id=1629658723]
+stream = SubResource("AudioStreamWAV_a5jl1")
+volume_db = 5.0

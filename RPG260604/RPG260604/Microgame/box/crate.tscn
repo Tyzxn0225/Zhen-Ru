@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://lyuq5qwfqs8v"]
+
+[ext_resource type="Script" uid="uid://b110nmb6w3k1a" path="res://Microgame/box/crate.gd" id="1_mo0jf"]
+[ext_resource type="Texture2D" uid="uid://cnmn6wlj0udgy" path="res://Microgame/box/sokoban_tilesheet.png" id="1_uep05"]
+
+[node name="Crate" type="Node2D" groups=["crates"]]
+script = ExtResource("1_mo0jf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_uep05")
+region_enabled = true
+region_rect = Rect2(64, 0, 64, 64)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D")

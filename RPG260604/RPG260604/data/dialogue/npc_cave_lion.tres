@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://cm54is5cydgyk"]
+
+[ext_resource type="Script" uid="uid://kk5n7wr6tkks" path="res://data/dialogue/dialogue_data.gd" id="1_2atkj"]
+[ext_resource type="Texture2D" uid="uid://bcsh3hr1uvpwl" path="res://Sprites/Actor/Characters/CaveLion/Faceset.png" id="2_faceset"]
+
+[resource]
+script = ExtResource("1_2atkj")
+npc_name = "Cave Lion"
+npc_icom = ExtResource("2_faceset")
+line = Array[String](["Roar!", "Welcome to the wild."])

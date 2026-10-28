@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dnsvo8doj6krq"
+path="res://.godot/imported/踢球，体育生男，动，操场.dialogue-9a450299afa1b4ec0aba4837c1ba255e.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/踢球，体育生男，动，操场.dialogue"
+dest_files=["res://.godot/imported/踢球，体育生男，动，操场.dialogue-9a450299afa1b4ec0aba4837c1ba255e.tres"]
+
+[params]
+
+defaults=true

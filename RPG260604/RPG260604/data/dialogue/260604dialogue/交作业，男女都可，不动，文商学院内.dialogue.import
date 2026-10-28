@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ec8j7d6xcyn6"
+path="res://.godot/imported/交作业，男女都可，不动，文商学院内.dialogue-5c9b33c6b6fcac1ddd3ebe3a79d43f47.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/交作业，男女都可，不动，文商学院内.dialogue"
+dest_files=["res://.godot/imported/交作业，男女都可，不动，文商学院内.dialogue-5c9b33c6b6fcac1ddd3ebe3a79d43f47.tres"]
+
+[params]
+
+defaults=true

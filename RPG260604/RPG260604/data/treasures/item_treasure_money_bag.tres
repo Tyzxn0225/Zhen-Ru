@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://tre001moneybag001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txtreasuremoneybag001" path="res://Sprites/Items/Object/MoneyBag.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+is_consumable = false
+max_stack = 20
+icon = ExtResource("1_qh54l")
+id = "treasure_money_bag"
+name = "钱袋"
+description = "装满金币的钱袋，价值不菲。"
+price = 200
+metadata/_custom_type_script = "uid://oady46xvsj7m"

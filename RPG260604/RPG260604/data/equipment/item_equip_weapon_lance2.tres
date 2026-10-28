@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://bhgh1gh1iob41"]
+
+[ext_resource type="Texture2D" uid="uid://txweaponlance2001" path="res://Sprites/Items/Weapons/Lance2/Sprite.png" id="1_h3cka"]
+[ext_resource type="Script" uid="uid://bs00b1lhbq4pj" path="res://data/equipment/equip_data.gd" id="2_wbqny"]
+
+[resource]
+script = ExtResource("2_wbqny")
+equip_type = 3
+type = 4
+max_stack = 1
+icon = ExtResource("1_h3cka")
+id = "equip_weapon_lance2"
+name = "骑士枪"
+description = "骑士使用的重型长枪。"
+price = 80
+metadata/_custom_type_script = "uid://bs00b1lhbq4pj"

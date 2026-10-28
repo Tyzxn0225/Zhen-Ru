@@ -1,0 +1,82 @@
+d: (懒洋洋地趴在一块大石头上，睁开一只眼睛)
+d: 喂，小子。我看你最近挺闲的，要不要来玩个拼图？
+- 哼，我只需要60s就能结束
+	Player: 哼，我只需要60秒就能结束。
+	d: (眼睛一亮，翻身坐起来) 哟呵？口气不小啊。
+	d: 行，那就来试试。我这儿有一幅古老的拼图，据说是某个老疯子留下的。
+	- 老疯子是谁？
+		Player: 老疯子？谁啊？
+		d: 不重要，反正他把这玩意儿丢在我这儿就跑了。
+		d: 说是"有缘人才能解开"。我看你挺有缘的……(奸笑) 或者挺闲的。
+		=> challenge_accepted
+	- 别废话，开始吧
+		Player: 别废话了，直接开始吧。
+		d: (满意地点头) 好！就喜欢你这种爽快人。
+		d: 不过丑话说前头——输了可不许哭鼻子。
+		=> challenge_accepted
+- 额，算了吧
+	Player: 额，算了吧……我手残。
+	d: (打了个哈欠，重新趴下去) 就知道你不敢。
+	d: 不过说真的，那拼图放着也是放着，哪天改了主意再来找我。
+	- 等等，我再想想
+		Player: 等等，我再想想……
+		d: (懒洋洋地摆摆手) 想好了再来，本王……呼噜……先眯一会儿。
+		=> END
+	- 那就改天再说
+		Player: 那就改天再说吧。
+		d: (已经打起了呼噜) 呼……呼……
+		=> END
+- 拼图？听起来没什么挑战性
+	Player: 拼图？听起来没什么挑战性啊。
+	d: (眯起眼睛) 哦？你确定？
+	d: 上一个说这话的人，在这块石头上坐了一整天，最后哭着跑了。
+	Player: ……真的假的？
+	d: (咧嘴一笑) 试试不就知道了？
+	=> challenge_accepted
+
+~ challenge_accepted
+d: (站起身，让开身后的石板) 来吧！让我看看你有什么本事。
+d: 规则很简单——把碎片拼成完整的图案就行。
+do UIManager.switch_scene_with_transition("res://Microgame/puzzle-all/scenes/ui/start_menu.tscn",null,"")
+set GameData.pending_dialogue_resource_path = "res://data/dialogue/to puzzle 1 test.dialogue"
+set GameData.pending_dialogue_title = "puzzle_return"
+=> END
+
+~ puzzle_return
+match GameData.puzzle_clear_count
+	when 0:
+		set GameData.puzzle_clear_count = 1
+		d: (目瞪口呆地看着你) 你……你真的解开了？
+		d: 我在这洞里守了多少年，来来往往多少人，没一个能解开的！
+		- 小意思啦
+			Player: 小意思啦，也就那样。
+			d: (摇头感叹) 真是天外有天……怪不得那老疯子说要等"有缘人"。
+			d: 看来你就是那个有缘人了。
+			=> puzzle_cleared
+		- 其实挺难的
+			Player: 其实挺难的，差点没解开。
+			d: (拍拍你的肩膀) 但你还是解开了！这可不是一般人能做到的。
+			d: 行，我雷牙认你这个朋友了！
+			=> puzzle_cleared
+	else:
+		d: (已经不再惊讶了) 又来？行吧，你确实是高手。
+		- 这不有手就行
+			Player: 这不有手就行？
+			d: (翻白眼) 对对对，有手就行……你这话要是让洞里的蝙蝠听见了会咬你的。
+			=> puzzle_cleared
+		- 闲着也是闲着
+			Player: 闲着也是闲着，来练练手。
+			d: 你这"练练手"对别人来说可是"烧脑子"，有点同情心好不好。
+			=> puzzle_cleared
+
+~ puzzle_cleared
+d: 不管怎么说，你确实有两下子。
+d: 有机会再来玩吧——下次我可以给你换个更难的。
+- 换个更难的？还有更难的？
+	Player: 还有更难的？！
+	d: (神秘一笑) 当然。不过今天先到这，我怕你头发掉太多。
+	=> END
+- 下次再战
+	Player: 下次再战！
+	d: 随时恭候。本王……呼噜……先睡会儿。
+	=> END

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dib5k1ssn30s0"
+path="res://.godot/imported/陈景明2.dialogue-e2b7cefa5b0da32afd97d3ce30a0f83f.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/陈景明2.dialogue"
+dest_files=["res://.godot/imported/陈景明2.dialogue-e2b7cefa5b0da32afd97d3ce30a0f83f.tres"]
+
+[params]
+
+defaults=true

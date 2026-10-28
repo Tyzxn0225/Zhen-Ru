@@ -1,0 +1,682 @@
+[gd_scene load_steps=28 format=3 uid="uid://dguh55nlmnqbg"]
+
+[ext_resource type="Script" uid="uid://s7wways7mc0g" path="res://Scenes/UI/main_buttons/main_buttons.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://chl3tal0v806j" path="res://Sprites/Items/Tool/Axe.png" id="2_axe"]
+[ext_resource type="Texture2D" uid="uid://gjnokcseymfk" path="res://Sprites/Items/Object/Bag.png" id="3_bag"]
+[ext_resource type="Texture2D" uid="uid://mm445ygdhav3" path="res://Sprites/stats.png" id="4_stats"]
+[ext_resource type="Texture2D" uid="uid://b0o5xnqce8l3d" path="res://Sprites/Items/Object/Book.png" id="5_wu02e"]
+[ext_resource type="PackedScene" uid="uid://dd850awehm2mv" path="res://Scenes/UI/equipment_panel/equipment_panel.tscn" id="7_eq_panel"]
+[ext_resource type="Script" uid="uid://dpigrx7tqtmnv" path="res://Scenes/UI/inventory_panel/inventory_panel.gd" id="8_6fdgo"]
+[ext_resource type="PackedScene" uid="uid://dkl6qx4bpbuog" path="res://Scenes/UI/stats_panel/stats_panel.tscn" id="8_stats_panel"]
+[ext_resource type="Texture2D" uid="uid://dbfg8jvijdjdb" path="res://Sprites/Items/Treasure/GoldCoin.png" id="9_f6y6n"]
+[ext_resource type="PackedScene" uid="uid://wru2e76yavx6" path="res://Scenes/UI/skill_panel/skills_panel.tscn" id="9_skills_panel"]
+[ext_resource type="PackedScene" uid="uid://e3vaxj3t4epu" path="res://Scenes/UI/inventory_panel/inventory_slot.tscn" id="10_slot"]
+[ext_resource type="Script" uid="uid://dcai73nsmo4ei" path="res://Scenes/UI/skill_panel/skills_panel.gd" id="11_skills_gd"]
+[ext_resource type="Script" uid="uid://6td7u1amj1fd" path="res://Scenes/UI/quest_panel/quest_panel.gd" id="12_quest_panel"]
+[ext_resource type="Script" uid="uid://cb5mh0doy35es" path="res://Scenes/town/sub_viewport.gd" id="14_f6y6n"]
+[ext_resource type="Script" uid="uid://b0a0asujnn1ux" path="res://Scenes/UI/world_map/world_map_panel.gd" id="15_world_map_panel"]
+[ext_resource type="Script" uid="uid://cqekx4uicfj2d" path="res://Scenes/UI/world_map/world_map_viewport.gd" id="16_world_map_viewport"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel_bg"]
+bg_color = Color(0.14901961, 0.15686275, 0.20784314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
+bg_color = Color(0.28627452, 0.30588236, 0.36862746, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed"]
+bg_color = Color(0.16635856, 0.17956823, 0.22195166, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
+bg_color = Color(0.4498402, 0.4749626, 0.5546477, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed2"]
+bg_color = Color(0.16635856, 0.17956823, 0.22195166, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover2"]
+bg_color = Color(0.4498402, 0.4749626, 0.5546477, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed3"]
+bg_color = Color(0.16635856, 0.17956823, 0.22195166, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover3"]
+bg_color = Color(0.4498402, 0.4749626, 0.5546477, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_pressed4"]
+bg_color = Color(0.16635856, 0.17956823, 0.22195166, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover4"]
+bg_color = Color(0.4498402, 0.4749626, 0.5546477, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1xeu"]
+bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.101960786, 0.11372549, 0.14901961, 1)
+shadow_size = 2
+shadow_offset = Vector2(4, 4)
+
+[node name="MainButtonsCanvasLayer" type="CanvasLayer"]
+process_mode = 3
+layer = 10
+script = ExtResource("1_script")
+metadata/_edit_horizontal_guides_ = [1298.0]
+
+[node name="MainButtons" type="Panel" parent="."]
+unique_name_in_owner = true
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -350.0
+offset_top = -132.0
+offset_right = -234.0
+offset_bottom = -66.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(2, 2)
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel_bg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainButtons"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -31.0
+offset_right = 116.0
+offset_bottom = 31.0
+grow_vertical = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainButtons/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="EquipmentButton" type="Button" parent="MainButtons/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+text = "
+道具"
+
+[node name="Icon" type="TextureRect" parent="MainButtons/MarginContainer/HBoxContainer/EquipmentButton"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -23.0
+offset_right = 15.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_axe")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="InventoryButton" type="Button" parent="MainButtons/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover2")
+text = "
+背包"
+
+[node name="Icon" type="TextureRect" parent="MainButtons/MarginContainer/HBoxContainer/InventoryButton"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -23.0
+offset_right = 15.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_bag")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StatsButton" type="Button" parent="MainButtons/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover3")
+text = "
+属性"
+
+[node name="Icon" type="TextureRect" parent="MainButtons/MarginContainer/HBoxContainer/StatsButton"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -23.0
+offset_right = 15.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_stats")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SkillsButton" type="Button" parent="MainButtons/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover4")
+text = "
+日记"
+
+[node name="Icon" type="TextureRect" parent="MainButtons/MarginContainer/HBoxContainer/SkillsButton"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -23.0
+offset_right = 15.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_wu02e")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="QuestButton" type="Button" parent="MainButtons/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btn_pressed4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover4")
+text = "
+任务"
+
+[node name="Icon" type="TextureRect" parent="MainButtons/MarginContainer/HBoxContainer/QuestButton"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -23.0
+offset_right = 15.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_wu02e")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Panels" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 1.067
+anchor_top = 1.1600001
+anchor_right = 1.067
+anchor_bottom = 1.1600001
+offset_left = -649.52
+offset_top = -1068.4001
+offset_right = 341.14673
+offset_bottom = -606.40015
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.5, 1.5)
+mouse_filter = 2
+theme_override_constants/separation = 32
+
+[node name="QuestPanel" type="PanelContainer" parent="Panels"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(314, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_t1xeu")
+script = ExtResource("12_quest_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panels/QuestPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="Panels/QuestPanel/MarginContainer"]
+custom_minimum_size = Vector2(298, 310)
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Label" type="Label" parent="Panels/QuestPanel/MarginContainer/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "任务列表"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Panels/QuestPanel/MarginContainer/VBox"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.8666667, 0.8666667, 0.8666667, 0.14901961)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panels/QuestPanel/MarginContainer/VBox"]
+custom_minimum_size = Vector2(298, 380)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="Container" type="VBoxContainer" parent="Panels/QuestPanel/MarginContainer/VBox/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="Space2" type="Control" parent="Panels/QuestPanel/MarginContainer/VBox"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="InventoryPanel" type="PanelContainer" parent="Panels" node_paths=PackedStringArray("grabbed_slot")]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(215, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t1xeu")
+script = ExtResource("8_6fdgo")
+grabbed_slot = NodePath("../../GrabbedSlot")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panels/InventoryPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="Panels/InventoryPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panels/InventoryPanel/MarginContainer/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "背包"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Panels/InventoryPanel/MarginContainer/VBox"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.8666667, 0.8666667, 0.8666667, 0.14901961)
+
+[node name="HBoxCoin" type="HBoxContainer" parent="Panels/InventoryPanel/MarginContainer/VBox"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="TextureRect" type="TextureRect" parent="Panels/InventoryPanel/MarginContainer/VBox/HBoxCoin"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("9_f6y6n")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Panels/InventoryPanel/MarginContainer/VBox/HBoxCoin"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "3000"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panels/InventoryPanel/MarginContainer/VBox"]
+custom_minimum_size = Vector2(298, 380)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="Container" type="GridContainer" parent="Panels/InventoryPanel/MarginContainer/VBox/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 4
+
+[node name="Space2" type="Control" parent="Panels/InventoryPanel/MarginContainer/VBox"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="EquipmentPanel" parent="Panels" instance=ExtResource("7_eq_panel")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="StatsPanel" parent="Panels" instance=ExtResource("8_stats_panel")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SkillsPanel" parent="Panels" instance=ExtResource("9_skills_panel")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+script = ExtResource("11_skills_gd")
+
+[node name="GrabbedSlot" parent="." instance=ExtResource("10_slot")]
+unique_name_in_owner = true
+offset_left = 939.0
+offset_top = 210.0
+offset_right = 974.0
+offset_bottom = 245.0
+mouse_filter = 2
+flat = true
+
+[node name="ToastHint" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+self_modulate = Color(1, 1, 1, 0.6627451)
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.521
+anchor_right = 0.5
+anchor_bottom = 0.521
+offset_left = -250.0
+offset_top = -0.24005127
+offset_right = 250.0
+offset_bottom = 91.75995
+grow_horizontal = 2
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ToastHint"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ToastHint/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="TitleLabel" type="Label" parent="ToastHint/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.88, 0.45, 1)
+theme_override_font_sizes/font_size = 32
+text = "提示"
+horizontal_alignment = 1
+
+[node name="DetailLabel" type="Label" parent="ToastHint/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.88, 0.9, 0.95, 0.92)
+theme_override_font_sizes/font_size = 32
+text = "qqqqqqqqqqqqqqqqqqqqqqqqq111111111"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="QuestHint" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.521
+anchor_right = 0.5
+anchor_bottom = 0.521
+offset_left = 803.0
+offset_top = -273.24005
+offset_right = 1280.0
+offset_bottom = -117.23993
+grow_horizontal = 2
+size_flags_vertical = 0
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="QuestHint"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="QuestHint/MarginContainer"]
+layout_mode = 2
+
+[node name="QuestHintTitleLabel" type="Label" parent="QuestHint/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.88, 0.45, 1)
+theme_override_font_sizes/font_size = 32
+text = "阶段 1"
+horizontal_alignment = 1
+
+[node name="QuestHintDetailLabel" type="Label" parent="QuestHint/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.88, 0.9, 0.95, 0.92)
+theme_override_font_sizes/font_size = 32
+text = "阶段目标"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="MINI MAP" type="PanelContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -477.0
+offset_bottom = 477.0
+grow_horizontal = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MINI MAP"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MINI MAP/MarginContainer"]
+layout_mode = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MINI MAP/MarginContainer/SubViewportContainer" node_paths=PackedStringArray("camera_2d")]
+handle_input_locally = false
+canvas_cull_mask = 4294967294
+size = Vector2i(437, 437)
+render_target_update_mode = 4
+script = ExtResource("14_f6y6n")
+camera_2d = NodePath("Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="MINI MAP/MarginContainer/SubViewportContainer/SubViewport"]
+zoom = Vector2(0.5, 0.5)
+
+[node name="world_map_panel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(314, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -617.5
+offset_top = -578.0
+offset_right = 538.5
+offset_bottom = 578.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t1xeu")
+script = ExtResource("15_world_map_panel")
+
+[node name="Root" type="Control" parent="world_map_panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="world_map_panel/Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="world_map_panel/Root/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="world_map_panel/Root/MarginContainer/SubViewportContainer"]
+unique_name_in_owner = true
+handle_input_locally = false
+canvas_cull_mask = 4294967294
+size = Vector2i(1136, 1136)
+render_target_update_mode = 4
+script = ExtResource("16_world_map_viewport")
+
+[node name="Camera2D" type="Camera2D" parent="world_map_panel/Root/MarginContainer/SubViewportContainer/SubViewport"]
+unique_name_in_owner = true
+zoom = Vector2(0.35, 0.35)
+
+[node name="CloseButton" type="Button" parent="world_map_panel/Root"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -48.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 48.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 28
+text = "×"

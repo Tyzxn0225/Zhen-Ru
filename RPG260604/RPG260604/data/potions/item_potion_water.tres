@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c2xjfa6s5hups"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txwaterpot001" path="res://Sprites/Items/Potion/WaterPot.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 2
+is_consumable = true
+value = 1.0
+max_stack = 30
+icon = ExtResource("1_qh54l")
+id = "hp_potion_water"
+name = "清水"
+description = "恢复1点生命值。"
+price = 2
+metadata/_custom_type_script = "uid://oady46xvsj7m"

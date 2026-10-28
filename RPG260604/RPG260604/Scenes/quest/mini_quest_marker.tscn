@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ftedybnptk0h"]
+
+[ext_resource type="Script" uid="uid://d102kd5ryl2we" path="res://Scenes/quest/mini_quest_marker.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://rl6w11mquxg" path="res://sample/570+Icons-v1.0.3/2.Media & Technology/location_64px.png" id="2_icon"]
+
+[node name="MiniQuestMarker" type="Node2D"]
+visibility_layer = 2
+z_index = -19
+script = ExtResource("1_script")
+
+[node name="Outline" type="Sprite2D" parent="."]
+visible = false
+visibility_layer = 2
+modulate = Color(1, 0.88, 0.45, 0.85)
+scale = Vector2(4.05, 4.05)
+texture = ExtResource("2_icon")
+
+[node name="Icon" type="Sprite2D" parent="."]
+visibility_layer = 2
+scale = Vector2(3, 3)
+texture = ExtResource("2_icon")

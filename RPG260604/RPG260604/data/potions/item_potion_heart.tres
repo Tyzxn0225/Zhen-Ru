@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c2xjeubajjups"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txheart001" path="res://Sprites/Items/Potion/Heart.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 2
+is_consumable = true
+value = 10.0
+max_stack = 10
+icon = ExtResource("1_qh54l")
+id = "hp_potion_large"
+name = "大型生命药水"
+description = "恢复10点生命值。"
+price = 25
+metadata/_custom_type_script = "uid://oady46xvsj7m"

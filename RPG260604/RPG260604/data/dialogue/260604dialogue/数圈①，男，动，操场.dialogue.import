@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c5ecqbvub5xv4"
+path="res://.godot/imported/数圈①，男，动，操场.dialogue-3d7cf05aa4f654b2c9fb3cb90d1c273d.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/数圈①，男，动，操场.dialogue"
+dest_files=["res://.godot/imported/数圈①，男，动，操场.dialogue-3d7cf05aa4f654b2c9fb3cb90d1c273d.tres"]
+
+[params]
+
+defaults=true

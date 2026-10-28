@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://4a7pgbtbjyek"]
+
+[ext_resource type="Script" uid="uid://ct4f55c26tkie" path="res://Scenes/dialogue_panel/dialogue_panel.gd" id="1_ciw05"]
+[ext_resource type="Texture2D" uid="uid://3wamnv2tv8ov" path="res://Sprites/Ui/Dialog/DialogueBoxSimple.png" id="1_mv2rn"]
+[ext_resource type="Texture2D" uid="uid://g8hvg0d5rhdi" path="res://Sprites/Actor/Characters/Child/Faceset.png" id="2_ciw05"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6mliy"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[node name="DialoguePanel" type="Control" unique_id=1649556357]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ciw05")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=702117930]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.19215687)
+
+[node name="BoxTexture" type="NinePatchRect" parent="." unique_id=948979243]
+custom_minimum_size = Vector2(800, 160)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -399.0
+offset_top = -260.0
+offset_right = 401.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_mv2rn")
+
+[node name="MarginContainer" type="MarginContainer" parent="BoxTexture" unique_id=2129311911]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 12
+
+[node name="DialogueLabel" type="Label" parent="BoxTexture/MarginContainer" unique_id=1478539614]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+text = "hyw"
+label_settings = SubResource("LabelSettings_6mliy")
+autowrap_mode = 2
+
+[node name="NPCIcon" type="TextureRect" parent="." unique_id=1571840686]
+unique_name_in_owner = true
+show_behind_parent = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 212.0
+offset_top = 372.0
+offset_right = 312.0
+offset_bottom = 472.0
+texture = ExtResource("2_ciw05")

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cn03ku5qtcfs4"]
+
+[ext_resource type="Texture2D" uid="uid://cav6bn6nfxs0l" path="res://Sprites/Items/Potion/WaterPot.png" id="1_7b15p"]
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="2_8hs58"]
+
+[resource]
+script = ExtResource("2_8hs58")
+type = 2
+is_consumable = true
+value = 5.0
+icon = ExtResource("1_7b15p")
+id = "mana_potion"
+name = "法力药水5"
+description = "恢复5点mana"
+price = 3
+metadata/_custom_type_script = "uid://oady46xvsj7m"

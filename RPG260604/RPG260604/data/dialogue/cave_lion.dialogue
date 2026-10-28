@@ -1,0 +1,50 @@
+# 洞窟雄狮 · 雷牙
+# 人物设定：
+#   姓名：雷牙
+#   种族：洞窟雄狮
+#   性格：外表威严但内心慵懒，自称"洞窟之王"，其实最喜欢晒太阳打盹
+#   口头禅："本王……呼噜……"
+
+
+~ start
+match GameData.cavelion_meet_count
+	when 0:
+		set GameData.cavelion_meet_count = 1
+		ThunderFang: (懒洋洋地趴在一块大石头上，睁开一只眼睛)
+		ThunderFang: 嗯？有人类？本王还以为这里只有蝙蝠会来串门。
+		ThunderFang: 站远点，小子。虽然本王今天心情不错……但你可别以为狮子不打盹就好惹。
+		- 你好，我只是路过
+			Player: 你好，我只是路过这里，不会打扰你的。
+			ThunderFang: (打了个哈欠) 路过？哼，路过的人都这么说，结果一个个都想摸本王的鬃毛。
+			ThunderFang: 不过你看着还挺老实的。过来坐吧，本王今天懒得赶人。
+			=> first_meet_end
+		- 你是这里的王？
+			Player: 你是这里的王？
+			ThunderFang: (傲娇地抬起下巴) 洞窟北区都是本王的领地。
+			ThunderFang: 虽然……南区那个臭蝙蝠总是不服气。但本王懒得跟他计较。
+			=> first_meet_end
+		- 你看起来好像很困
+			Player: 你看起来好像很困？
+			ThunderFang: 困？本王只是在……冥想。对，冥想。
+			ThunderFang: 你一个人类懂什么，王者需要思考的事情多着呢。
+			=> first_meet_end
+
+	else:
+		ThunderFang: (正躺着，肚子朝天) 呼噜……呼……
+		ThunderFang: (猛地惊醒) 咳！本王没睡！只是在检查天花板！
+		- 哈哈哈，你明明在打呼噜
+			Player: 哈哈哈，你明明在打呼噜！
+			ThunderFang: 胡说！那是……那是本王的狮子吼练功声！
+			ThunderFang: 行了行了，没事的话本王继续……练功了。
+			=> first_meet_end
+		- 那我先走了
+			Player: 那我先走了，不打扰你休息。
+			ThunderFang: 嗯。下次来的时候给本王带点肉干更好。
+			ThunderFang: ……开玩笑的，随便带点也行。
+			=> first_meet_end
+
+~ first_meet_end
+ThunderFang: 对了，你在这洞窟里要是遇到麻烦，报本王"雷牙"的名号。
+ThunderFang: 虽然可能没什么用。但至少能让你死得比较有面子。哈！
+do UIManager.switch_scene_with_transition("res://Microgame/box/box game.tscn",null,"")
+=> END

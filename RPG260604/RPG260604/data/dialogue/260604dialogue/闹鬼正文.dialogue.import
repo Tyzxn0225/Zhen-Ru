@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bb4cgxul30eyv"
+path="res://.godot/imported/闹鬼正文.dialogue-94484c6530428fe73e6f5323aeff9648.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/闹鬼正文.dialogue"
+dest_files=["res://.godot/imported/闹鬼正文.dialogue-94484c6530428fe73e6f5323aeff9648.tres"]
+
+[params]
+
+defaults=true

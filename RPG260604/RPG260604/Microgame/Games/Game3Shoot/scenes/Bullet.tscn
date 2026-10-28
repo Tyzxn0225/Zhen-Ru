@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cfquv3ialm82n"]
+
+[ext_resource type="Texture2D" uid="uid://c052psxh431it" path="res://Microgame/Games/Game3Shoot/assets/images/Bullet.png" id="1_jx8bh"]
+[ext_resource type="Script" uid="uid://cto08m4evh2ym" path="res://Microgame/Games/Game3Shoot/scripts/bullet.gd" id="1_kahtv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ecbf"]
+size = Vector2(6, 3)
+
+[node name="Bullet" type="Area2D" unique_id=649179952 groups=["bullet"]]
+script = ExtResource("1_kahtv")
+bullet_speed = 300.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1481621245]
+scale = Vector2(2, 2)
+texture = ExtResource("1_jx8bh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1149504250]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_8ecbf")

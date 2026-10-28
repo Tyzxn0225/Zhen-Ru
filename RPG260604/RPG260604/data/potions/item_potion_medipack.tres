@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ovf4tktt7txw"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://bh25ayt3werxw" path="res://Sprites/Items/Potion/Medipack.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 2
+is_consumable = true
+max_stack = 5
+value = 15.0
+icon = ExtResource("1_qh54l")
+id = "hp_potion_max"
+name = "急救包"
+description = "恢复15点生命值。"
+price = 40
+metadata/_custom_type_script = "uid://oady46xvsj7m"

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://3jqqauoni5g4"
+path="res://.godot/imported/俩教授吵架，俩男，不动，文商学院.dialogue-5fc85f05151acf527e3d68e9f7f4d2bb.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/俩教授吵架，俩男，不动，文商学院.dialogue"
+dest_files=["res://.godot/imported/俩教授吵架，俩男，不动，文商学院.dialogue-5fc85f05151acf527e3d68e9f7f4d2bb.tres"]
+
+[params]
+
+defaults=true

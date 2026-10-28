@@ -1,0 +1,12 @@
+~ start
+Nathan: 你想去另一个世界冒险吗？
+- 好的，出发！
+	do GameData.return_scene = get_tree().current_scene.scene_file_path
+	do LongSceneManager.remove_cached_scene("res://tests/world.tscn")
+	do LongSceneManager.remove_temp_resource("res://tests/world.tscn")
+	do LongSceneManager.remove_fixed_resource("res://tests/world.tscn")
+	do LongSceneManager.switch_scene("res://tests/world.tscn", LongSceneManager.LoadMethod.BOTH_PRELOAD_FIRST, true, "no_transition")
+	=> END
+- 还是算了
+	Nathan: 好吧，下次再说。
+	=> END

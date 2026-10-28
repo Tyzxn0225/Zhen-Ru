@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://abc123octopus001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txoctopus001" path="res://Sprites/Items/Food/Octopus.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 0
+is_consumable = true
+value = 80.0
+max_stack = 10
+icon = ExtResource("1_qh54l")
+id = "food_octopus"
+name = "章鱼刺身"
+description = "鲜美的章鱼刺身，恢复80点体力。"
+price = 15
+metadata/_custom_type_script = "uid://oady46xvsj7m"

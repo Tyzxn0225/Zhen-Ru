@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c2thkcilnpqdc"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txseed1001" path="res://Sprites/Items/Food/Seed1.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+is_consumable = false
+max_stack = 50
+icon = ExtResource("1_qh54l")
+id = "resource_seed1"
+name = "小麦种子"
+description = "可以种植小麦的种子。"
+price = 1
+metadata/_custom_type_script = "uid://oady46xvsj7m"

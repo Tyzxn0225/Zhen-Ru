@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://d3me8uuqvyeqq"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txmilkpot001" path="res://Sprites/Items/Potion/MilkPot.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 2
+is_consumable = true
+value = 3.0
+max_stack = 15
+icon = ExtResource("1_qh54l")
+id = "hp_potion_milk"
+name = "牛奶"
+description = "恢复3点生命值，口感顺滑。"
+price = 6
+metadata/_custom_type_script = "uid://oady46xvsj7m"

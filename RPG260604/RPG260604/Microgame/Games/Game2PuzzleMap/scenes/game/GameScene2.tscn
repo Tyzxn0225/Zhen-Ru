@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://xakvossdni5g"]
+
+[ext_resource type="Script" uid="uid://cw8g7v4hevnuw" path="res://Microgame/Games/Game2PuzzleMap/scripts/game/GameScene2.gd" id="1_1nllg"]
+[ext_resource type="FontFile" uid="uid://baoboilecx6mo" path="res://Microgame/Games/Game1PuzzleAll/assets/fonts/fusion-pixel-12px-monospaced-zh_hans.ttf" id="2_chos0"]
+[ext_resource type="Texture2D" uid="uid://doxjkv350ult1" path="res://Microgame/Games/Game1PuzzleAll/assets/images/play.png" id="2_kbsjx"]
+[ext_resource type="AudioStream" uid="uid://badowbv8w1d0c" path="res://Microgame/Games/shared/assets/audio/press2.wav" id="3_gllxc"]
+[ext_resource type="AudioStream" uid="uid://dvwh27fppjjh3" path="res://Microgame/Games/shared/assets/audio/win.wav" id="4_gllxc"]
+[ext_resource type="AudioStream" uid="uid://dgdc721doysj7" path="res://Microgame/Games/shared/assets/audio/lose.wav" id="5_mgl0u"]
+[ext_resource type="AudioStream" uid="uid://bqklo6xe0i0mc" path="res://Microgame/Games/shared/assets/audio/press1.wav" id="6_mgl0u"]
+
+[node name="GameScene" type="Node2D"]
+script = ExtResource("1_1nllg")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.039215688, 0.039215688, 0.101960786, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+position = Vector2(1284.25, 750.25)
+scale = Vector2(1.0247071, 1.0870274)
+texture = ExtResource("2_kbsjx")
+
+[node name="PuzzleContainer" type="Node2D" parent="."]
+
+[node name="GameTimer" type="Timer" parent="."]
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="TimerLabel" type="Label" parent="UILayer"]
+visible = false
+offset_left = 50.0
+offset_top = 20.0
+offset_right = 175.0
+offset_bottom = 71.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_chos0")
+theme_override_font_sizes/font_size = 50
+text = "01:00"
+
+[node name="BackButton" type="Button" parent="UILayer"]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -360.0
+offset_top = 100.0
+offset_right = -152.0
+offset_bottom = 209.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("2_chos0")
+theme_override_font_sizes/font_size = 100
+text = "返回"
+
+[node name="AudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gllxc")
+volume_db = 5.0
+
+[node name="WinAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_gllxc")
+
+[node name="LoseAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_mgl0u")
+
+[node name="PressAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_mgl0u")
+volume_db = 5.0
+
+[node name="ImagePreview" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 800.0
+offset_top = 400.0
+offset_right = 3800.0
+offset_bottom = 1900.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.01, 0.01)
+expand_mode = 1
+stretch_mode = 5

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://tool001pickaxe001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txtoolpickaxe001" path="res://Sprites/Items/Tool/Pickaxe.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+is_consumable = false
+max_stack = 1
+icon = ExtResource("1_qh54l")
+id = "tool_pickaxe"
+name = "镐子"
+description = "坚固的镐子，用于挖掘矿石和破坏石质障碍物。"
+price = 60
+metadata/_custom_type_script = "uid://oady46xvsj7m"

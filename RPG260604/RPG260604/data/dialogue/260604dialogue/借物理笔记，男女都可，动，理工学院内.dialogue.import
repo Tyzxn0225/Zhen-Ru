@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cwqx2dkspn5mw"
+path="res://.godot/imported/借物理笔记，男女都可，动，理工学院内.dialogue-a1517e3a6803a1512b53ff268fae3509.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/借物理笔记，男女都可，动，理工学院内.dialogue"
+dest_files=["res://.godot/imported/借物理笔记，男女都可，动，理工学院内.dialogue-a1517e3a6803a1512b53ff268fae3509.tres"]
+
+[params]
+
+defaults=true

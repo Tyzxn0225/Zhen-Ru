@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://bujo5lxxvw46g"]
+
+[ext_resource type="Texture2D" uid="uid://bfkuve6332x8n" path="res://Sprites/Equipment/placeholder_ring.png" id="1_17r2g"]
+[ext_resource type="Script" uid="uid://bs00b1lhbq4pj" path="res://data/equipment/equip_data.gd" id="2_h0n4b"]
+
+[resource]
+script = ExtResource("2_h0n4b")
+equip_type = 4
+type = 4
+max_stack = 1
+icon = ExtResource("1_17r2g")
+id = "equip_ring"
+name = "普通戒指"
+price = 20
+metadata/_custom_type_script = "uid://bs00b1lhbq4pj"

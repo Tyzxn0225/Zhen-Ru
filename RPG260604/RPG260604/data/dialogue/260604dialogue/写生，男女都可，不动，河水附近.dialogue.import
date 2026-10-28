@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c06yvtf7augau"
+path="res://.godot/imported/写生，男女都可，不动，河水附近.dialogue-49ba3a630e3ee0ef8bbf432bba94abd5.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/写生，男女都可，不动，河水附近.dialogue"
+dest_files=["res://.godot/imported/写生，男女都可，不动，河水附近.dialogue-49ba3a630e3ee0ef8bbf432bba94abd5.tres"]
+
+[params]
+
+defaults=true

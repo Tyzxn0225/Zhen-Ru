@@ -1,0 +1,123 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpausemenu002"]
+
+[ext_resource type="Script" uid="uid://dka3pd58ixoj7" path="res://Scenes/UI/pause_menu/pause_menu.gd" id="1_script"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+layer = 110
+process_mode = 3
+script = ExtResource("1_script")
+
+[node name="DimBg" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+color = Color(0, 0, 0, 0.6)
+
+[node name="MainPanel" type="Panel" parent="."]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -783.0
+offset_top = -521.0
+offset_right = 743.0
+offset_bottom = 393.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainMargin" type="MarginContainer" parent="MainPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 16
+
+[node name="MainVBox" type="VBoxContainer" parent="MainPanel/MainMargin"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HeaderHBox" type="HBoxContainer" parent="MainPanel/MainMargin/MainVBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="PauseIcon" type="TextureRect" parent="MainPanel/MainMargin/MainVBox/HeaderHBox"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MainPanel/MainMargin/MainVBox/HeaderHBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "游戏暂停"
+horizontal_alignment = 1
+
+[node name="Separator" type="ColorRect" parent="MainPanel/MainMargin/MainVBox"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+color = Color(1, 1, 1, 0.15)
+
+[node name="Spacer" type="Control" parent="MainPanel/MainMargin/MainVBox"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="ContinueButton" type="Button" parent="MainPanel/MainMargin/MainVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "继续游戏"
+
+[node name="ExitButton" type="Button" parent="MainPanel/MainMargin/MainVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "返回主菜单"
+
+[node name="SaveLoadHBox" type="HBoxContainer" parent="MainPanel/MainMargin/MainVBox"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SaveButton" type="Button" parent="MainPanel/MainMargin/MainVBox/SaveLoadHBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 48
+text = "存档"
+
+[node name="LoadButton" type="Button" parent="MainPanel/MainMargin/MainVBox/SaveLoadHBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 48
+text = "读档"
+
+[node name="Spacer2" type="Control" parent="MainPanel/MainMargin/MainVBox"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="SaveStatusLabel" type="Label" parent="MainPanel/MainMargin/MainVBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 1, 0.4, 1)
+theme_override_font_sizes/font_size = 13
+horizontal_alignment = 1
+
+[connection signal="pressed" from="MainPanel/MainMargin/MainVBox/ContinueButton" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="MainPanel/MainMargin/MainVBox/ExitButton" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="MainPanel/MainMargin/MainVBox/SaveLoadHBox/SaveButton" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="MainPanel/MainMargin/MainVBox/SaveLoadHBox/LoadButton" to="." method="_on_load_pressed"]

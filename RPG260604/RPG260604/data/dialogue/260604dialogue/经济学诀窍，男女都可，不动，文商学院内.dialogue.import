@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bp18xivbprio2"
+path="res://.godot/imported/经济学诀窍，男女都可，不动，文商学院内.dialogue-775c1e9c6f73852b9aad90213d271b78.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/经济学诀窍，男女都可，不动，文商学院内.dialogue"
+dest_files=["res://.godot/imported/经济学诀窍，男女都可，不动，文商学院内.dialogue-775c1e9c6f73852b9aad90213d271b78.tres"]
+
+[params]
+
+defaults=true

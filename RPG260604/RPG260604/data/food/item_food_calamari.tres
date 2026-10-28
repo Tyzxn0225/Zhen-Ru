@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://abc123calamari001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txcalamari001" path="res://Sprites/Items/Food/Calamari.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 0
+is_consumable = true
+value = 60.0
+max_stack = 15
+icon = ExtResource("1_qh54l")
+id = "food_calamari"
+name = "烤鱿鱼"
+description = "香脆的烤鱿鱼，恢复60点体力。"
+price = 12
+metadata/_custom_type_script = "uid://oady46xvsj7m"

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://kc5t4biowqv8"
+path="res://.godot/imported/推箱子前.dialogue-58caad089a45d238e2bd28e6bda5f2f1.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/推箱子前.dialogue"
+dest_files=["res://.godot/imported/推箱子前.dialogue-58caad089a45d238e2bd28e6bda5f2f1.tres"]
+
+[params]
+
+defaults=true

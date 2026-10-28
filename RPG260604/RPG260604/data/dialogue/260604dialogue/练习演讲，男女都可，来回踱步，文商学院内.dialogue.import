@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cqv2owdqjjlm0"
+path="res://.godot/imported/练习演讲，男女都可，来回踱步，文商学院内.dialogue-1962ceb6b17a075e2b614abac72860f6.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/练习演讲，男女都可，来回踱步，文商学院内.dialogue"
+dest_files=["res://.godot/imported/练习演讲，男女都可，来回踱步，文商学院内.dialogue-1962ceb6b17a075e2b614abac72860f6.tres"]
+
+[params]
+
+defaults=true

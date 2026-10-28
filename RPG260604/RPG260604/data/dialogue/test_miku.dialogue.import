@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bvmiku0000001"
+path="res://.godot/imported/test_miku.dialogue-1409488800d95c70f018d2fc4e824339.tres"
+
+[deps]
+
+source_file="res://data/dialogue/test_miku.dialogue"
+dest_files=["res://.godot/imported/test_miku.dialogue-1409488800d95c70f018d2fc4e824339.tres"]
+
+[params]
+
+defaults=true

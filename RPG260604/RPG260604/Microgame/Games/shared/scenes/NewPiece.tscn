@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cyejt246cwp73"]
+
+[ext_resource type="Script" path="res://Microgame/Games/shared/scripts/NewPiece.gd" id="1_4d38d"]
+
+[node name="TextureButton" type="TextureButton" unique_id=1406352349]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -952.0
+offset_bottom = -520.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(100, 100)
+script = ExtResource("1_4d38d")

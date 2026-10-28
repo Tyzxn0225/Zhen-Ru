@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://duru8g8s6870p"]
+
+[ext_resource type="Script" uid="uid://2swcahwhlwji" path="res://Microgame/Games/Game3Shoot/scripts/GameManager3.gd" id="1_u47yq"]
+[ext_resource type="PackedScene" uid="uid://buf4ij2be0nrc" path="res://Microgame/Games/Game3Shoot/scenes/Player.tscn" id="2_pddb1"]
+[ext_resource type="Texture2D" uid="uid://cuc6epdbymqom" path="res://Microgame/Games/Game3Shoot/assets/images/background.png" id="3_1hysx"]
+[ext_resource type="PackedScene" uid="uid://c4ywvh837ck13" path="res://Microgame/Games/Game3Shoot/scenes/Slime.tscn" id="3_acmq7"]
+[ext_resource type="FontFile" uid="uid://bvyjj5oaoxgr3" path="res://Microgame/Games/Game3Shoot/assets/fonts/Uranus_Pixel_11Px.ttf" id="5_cdq3r"]
+[ext_resource type="Texture2D" uid="uid://wap0uwm7ne1j" path="res://Microgame/Games/shared/assets/images/UI-press3.png" id="6_p6xei"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uugnx"]
+distance = -29.169998
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqofi"]
+size = Vector2(50.95411, 392.69763)
+
+[node name="GameManager" type="Node2D" unique_id=1522409474 node_paths=PackedStringArray("spawn_timer")]
+y_sort_enabled = true
+script = ExtResource("1_u47yq")
+slime_scene = ExtResource("3_acmq7")
+spawn_timer = NodePath("Timer")
+
+[node name="Background 1" type="Sprite2D" parent="." unique_id=2106368242]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(4, -13)
+scale = Vector2(0.45, 0.5)
+texture = ExtResource("3_1hysx")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=770495300]
+scale = Vector2(0.582, 1)
+zoom = Vector2(2.3, 2.1)
+
+[node name="Player" parent="." unique_id=287277256 instance=ExtResource("2_pddb1")]
+position = Vector2(-359, 181)
+
+[node name="Boundary" type="Node2D" parent="." unique_id=66471369]
+metadata/_edit_lock_ = true
+
+[node name="downStaticBody2D" type="StaticBody2D" parent="Boundary" unique_id=22513692]
+position = Vector2(-2, 144)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/downStaticBody2D" unique_id=1113506582]
+position = Vector2(-331, 169)
+shape = SubResource("WorldBoundaryShape2D_uugnx")
+
+[node name="leftStaticBody2D" type="StaticBody2D" parent="Boundary" unique_id=1503870281]
+position = Vector2(-251, 63)
+rotation = 1.57079
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/leftStaticBody2D" unique_id=1565559418]
+position = Vector2(133.99828, 274.00085)
+shape = SubResource("WorldBoundaryShape2D_uugnx")
+
+[node name="upStaticBody2D" type="StaticBody2D" parent="Boundary" unique_id=819791803]
+position = Vector2(-175, 13)
+rotation = -3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/upStaticBody2D" unique_id=1324310524]
+position = Vector2(198.99995, -14.000505)
+shape = SubResource("WorldBoundaryShape2D_uugnx")
+
+[node name="rightStaticBody2D" type="StaticBody2D" parent="Boundary" unique_id=1886532030]
+position = Vector2(236, 62)
+rotation = -1.57079
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/rightStaticBody2D" unique_id=2124604822]
+position = Vector2(-139.00282, -448.9991)
+shape = SubResource("WorldBoundaryShape2D_uugnx")
+
+[node name="CanvasLayer1" type="CanvasLayer" parent="Boundary" unique_id=2118522090]
+
+[node name="Label" type="Label" parent="Boundary/CanvasLayer1" unique_id=24908741]
+offset_left = 105.0
+offset_top = 70.0
+offset_right = 605.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_cdq3r")
+theme_override_font_sizes/font_size = 100
+text = "Score: 0/10"
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="Boundary" unique_id=1201543123]
+visible = false
+
+[node name="Label" type="Label" parent="Boundary/CanvasLayer2" unique_id=878069079]
+offset_left = 100.0
+offset_top = 50.0
+offset_right = 600.0
+offset_bottom = 150.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_cdq3r")
+theme_override_font_sizes/font_size = 100
+text = "Score: 0/20"
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="Boundary" unique_id=1370706978]
+visible = false
+
+[node name="Label" type="Label" parent="Boundary/CanvasLayer3" unique_id=1346253164]
+offset_left = 100.0
+offset_top = 50.0
+offset_right = 600.0
+offset_bottom = 150.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_cdq3r")
+theme_override_font_sizes/font_size = 100
+text = "Score: 0/35"
+metadata/_edit_use_anchors_ = true
+
+[node name="UICanvas" type="CanvasLayer" parent="Boundary" unique_id=1000563836]
+offset = Vector2(-30, 30)
+transform = Transform2D(1, 0, 0, 1, -30, 30)
+
+[node name="BackButton" type="Button" parent="Boundary/UICanvas" unique_id=1618732655]
+light_mask = 3
+visibility_layer = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -152.0
+offset_top = 20.0
+offset_right = -44.0
+offset_bottom = 78.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("5_cdq3r")
+theme_override_font_sizes/font_size = 100
+text = "返回"
+
+[node name="EndWin" type="CanvasLayer" parent="Boundary" unique_id=1251393622]
+visible = false
+
+[node name="win_label" type="Label" parent="Boundary/EndWin" unique_id=971365786]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -650.0
+offset_top = -170.0
+offset_right = 657.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.362376, 0.545068, 0.245238, 1)
+theme_override_constants/outline_size = 60
+theme_override_fonts/font = ExtResource("5_cdq3r")
+theme_override_font_sizes/font_size = 300
+text = "游戏胜利!"
+horizontal_alignment = 1
+
+[node name="EndLose" type="CanvasLayer" parent="Boundary" unique_id=1236630612]
+visible = false
+
+[node name="lose_label" type="Label" parent="Boundary/EndLose" unique_id=799630225]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -650.0
+offset_top = -170.0
+offset_right = 657.0
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.362376, 0.545068, 0.245238, 1)
+theme_override_constants/outline_size = 60
+theme_override_fonts/font = ExtResource("5_cdq3r")
+theme_override_font_sizes/font_size = 300
+text = "游戏失败!"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=1273064498]
+wait_time = 3.0
+autostart = true
+
+[node name="resist" type="Area2D" parent="." unique_id=1533969269]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="resist" unique_id=852835495]
+position = Vector2(-167.1182, 172.48138)
+rotation = 0.017453292
+shape = SubResource("RectangleShape2D_iqofi")
+
+[node name="UiPress3" type="Sprite2D" parent="." unique_id=1948400372]
+position = Vector2(493, 311.99997)
+rotation = -3.14159
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_p6xei")
+
+[connection signal="timeout" from="Timer" to="." method="_spawn_slime"]

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dycuk560l17wp"
+path="res://.godot/imported/Lin wenxuan.dialogue-9d849495208ab08d50a023ab9288f7a6.tres"
+
+[deps]
+
+source_file="res://data/dialogue/Lin wenxuan.dialogue"
+dest_files=["res://.godot/imported/Lin wenxuan.dialogue-9d849495208ab08d50a023ab9288f7a6.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://25hejqgk3gmc"
+path="res://.godot/imported/和中学生说英语②，男女都可，不动，中学部附近.dialogue-8d487ca932f1ad3d690a6bd5800532f1.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/和中学生说英语②，男女都可，不动，中学部附近.dialogue"
+dest_files=["res://.godot/imported/和中学生说英语②，男女都可，不动，中学部附近.dialogue-8d487ca932f1ad3d690a6bd5800532f1.tres"]
+
+[params]
+
+defaults=true

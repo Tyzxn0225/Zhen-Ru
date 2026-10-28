@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dgu2dxmdehyj7"]
+
+[node name="MicroGameManage" type="Node2D" unique_id=993658069]
+
+[node name="StateMachine" type="Node2D" parent="." unique_id=1733862256]
+
+[node name="MenuState" type="Node2D" parent="StateMachine" unique_id=79041804]
+
+[node name="LoadingState" type="Node2D" parent="StateMachine" unique_id=706312033]
+
+[node name="PlayingState" type="Node2D" parent="StateMachine" unique_id=255945369]
+
+[node name="ResultState" type="Node2D" parent="StateMachine" unique_id=22615089]

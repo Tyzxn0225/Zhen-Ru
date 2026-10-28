@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c0gjyjmv54sts"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txdice20001" path="res://Sprites/Items/Object/Dice 20.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+is_consumable = false
+max_stack = 10
+icon = ExtResource("1_qh54l")
+id = "resource_dice_20"
+name = "20面骰子"
+description = "游戏用的20面骰子。"
+price = 10
+metadata/_custom_type_script = "uid://oady46xvsj7m"

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d27g7i1a4o6wp"
+path="res://.godot/imported/尝试新菜，男女都可，不动，食堂外.dialogue-4c20c10373b9919cf8ba92a4a3db3075.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/尝试新菜，男女都可，不动，食堂外.dialogue"
+dest_files=["res://.godot/imported/尝试新菜，男女都可，不动，食堂外.dialogue-4c20c10373b9919cf8ba92a4a3db3075.tres"]
+
+[params]
+
+defaults=true

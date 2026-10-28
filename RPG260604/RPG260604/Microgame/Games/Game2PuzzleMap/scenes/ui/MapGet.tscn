@@ -1,0 +1,119 @@
+[gd_scene load_steps=13 format=3 uid="uid://dl4b4xu48d07g"]
+
+[ext_resource type="Texture2D" uid="uid://cttcf63h7hwyx" path="res://Microgame/Games/Game1PuzzleAll/assets/images/background.png" id="1_7v0la"]
+[ext_resource type="Script" uid="uid://b0gnf14jr04bu" path="res://Microgame/Games/Game2PuzzleMap/scripts/ui/MapGet.gd" id="1_xqetj"]
+[ext_resource type="FontFile" uid="uid://baoboilecx6mo" path="res://Microgame/Games/Game1PuzzleAll/assets/fonts/fusion-pixel-12px-monospaced-zh_hans.ttf" id="2_7v0la"]
+[ext_resource type="AudioStream" uid="uid://bqklo6xe0i0mc" path="res://Microgame/Games/shared/assets/audio/press1.wav" id="3_xqetj"]
+[ext_resource type="Texture2D" uid="uid://dwj7x110j2uqy" path="res://Microgame/Games/Game2PuzzleMap/assets/images/map.png" id="5_xqetj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uk32"]
+atlas = ExtResource("5_xqetj")
+region = Rect2(0, 0, 910, 767)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkych"]
+atlas = ExtResource("5_xqetj")
+region = Rect2(910, 0, 910, 767)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7muw2"]
+atlas = ExtResource("5_xqetj")
+region = Rect2(1820, 0, 910, 767)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iquv5"]
+atlas = ExtResource("5_xqetj")
+region = Rect2(0, 767, 910, 767)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g55te"]
+atlas = ExtResource("5_xqetj")
+region = Rect2(910, 767, 910, 767)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb2x7"]
+atlas = ExtResource("5_xqetj")
+region = Rect2(1820, 767, 910, 767)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7uk32"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_7uk32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vkych")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7muw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iquv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g55te")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_eb2x7")
+}],
+"loop": true,
+"name": &"map",
+"speed": 6.0
+}]
+
+[node name="MapGet" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_xqetj")
+
+[node name="mapget" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -270.0
+offset_top = -447.0
+offset_right = 1726.0
+offset_bottom = 1129.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_7v0la")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 2064.0
+offset_top = 46.0
+offset_right = 2120.0
+offset_bottom = 78.0
+scale = Vector2(3, 3)
+theme_override_fonts/font = ExtResource("2_7v0la")
+theme_override_font_sizes/font_size = 24
+text = "返回"
+
+[node name="PressAudioPlayer" type="AudioStreamPlayer" parent="BackButton"]
+stream = ExtResource("3_xqetj")
+volume_db = 5.0
+
+[node name="get" type="AnimatedSprite2D" parent="."]
+position = Vector2(1300, 870)
+sprite_frames = SubResource("SpriteFrames_7uk32")
+animation = &"map"
+frame_progress = 0.36405846
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 421.0
+offset_top = 247.0
+offset_right = 2181.0
+offset_bottom = 408.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.98026496, 0.8376273, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("2_7v0la")
+theme_override_font_sizes/font_size = 200
+text = "恭喜你获得了地图！"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cwr2riqy6e441"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://bvewi62bn2pet" path="res://Sprites/Items/Potion/Heart.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 2
+category = 1
+is_consumable = true
+value = 9999.0
+icon = ExtResource("1_qh54l")
+id = "stamina_heart"
+name = "校园之心"
+description = "蕴含着校园力量的秘宝。右键使用后大幅提升体力上限并回满体力。"
+price = 999
+metadata/_custom_type_script = "uid://oady46xvsj7m"

@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://dd850awehm2mv"]
+
+[ext_resource type="PackedScene" uid="uid://b1dexpek27lg5" path="res://Scenes/UI/equipment_panel/equipment_slot.tscn" id="1_jd45k"]
+[ext_resource type="Script" uid="uid://bn0byqsm8d3dt" path="res://Scenes/UI/equipment_panel/equipment_panel.gd" id="1_w6vk5"]
+[ext_resource type="Texture2D" uid="uid://b5oevb1lcm4j7" path="res://Sprites/Items/Weapons/Katana/Sprite.png" id="2_w6vk5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1xeu"]
+bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.101960786, 0.11372549, 0.14901961, 1)
+shadow_size = 2
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_82cbf"]
+font_size = 20
+
+[node name="EquipmentPanel" type="PanelContainer" unique_id=1549723001]
+custom_minimum_size = Vector2(215, 0)
+offset_right = 215.0
+offset_bottom = 334.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t1xeu")
+script = ExtResource("1_w6vk5")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1249569527]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer" unique_id=261964728]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBox" unique_id=1178314628]
+layout_mode = 2
+text = "装备"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBox" unique_id=7814743]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.8666667, 0.8666667, 0.8666667, 0.14901961)
+
+[node name="Space" type="Control" parent="MarginContainer/VBox" unique_id=1567514750]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBox" unique_id=939117159]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Helmet" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer" unique_id=497744799]
+layout_mode = 2
+alignment = 1
+
+[node name="HelmetSlot" parent="MarginContainer/VBox/VBoxContainer/Helmet" unique_id=1010363266 instance=ExtResource("1_jd45k")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Chest" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer" unique_id=318658253]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="WeaponSlot" parent="MarginContainer/VBox/VBoxContainer/Chest" unique_id=159334997 instance=ExtResource("1_jd45k")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="BodySlot" parent="MarginContainer/VBox/VBoxContainer/Chest" unique_id=1204928859 instance=ExtResource("1_jd45k")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBox/VBoxContainer/Chest" unique_id=1508721967]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="Legs" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer" unique_id=1737325892]
+layout_mode = 2
+alignment = 1
+
+[node name="LegsSlot" parent="MarginContainer/VBox/VBoxContainer/Legs" unique_id=1402070406 instance=ExtResource("1_jd45k")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Ring" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer" unique_id=734463664]
+layout_mode = 2
+alignment = 1
+
+[node name="RingSlot" parent="MarginContainer/VBox/VBoxContainer/Ring" unique_id=9579614 instance=ExtResource("1_jd45k")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Space2" type="Control" parent="MarginContainer/VBox/VBoxContainer" unique_id=536199041]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="HBoxdamage" type="HBoxContainer" parent="MarginContainer/VBox" unique_id=18642063]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBox/HBoxdamage" unique_id=2051769120]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("2_w6vk5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBox/HBoxdamage" unique_id=776525814]
+layout_mode = 2
+text = "150"
+label_settings = SubResource("LabelSettings_82cbf")

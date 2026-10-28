@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ch865oif3idga"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txtrecoin2001" path="res://Sprites/Items/Treasure/Coin2.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+is_consumable = false
+max_stack = 999
+icon = ExtResource("1_qh54l")
+id = "treasure_coin2"
+name = "铜币"
+description = "普通的铜币，价值较低。"
+price = 0.5
+metadata/_custom_type_script = "uid://oady46xvsj7m"

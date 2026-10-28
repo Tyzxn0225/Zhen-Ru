@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://44j0mcjea2lt"
+path="res://.godot/imported/打算盘，男女都可，来回踱步，理工学院内.dialogue-fd28286608e7f9daffe16318f8589022.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/打算盘，男女都可，来回踱步，理工学院内.dialogue"
+dest_files=["res://.godot/imported/打算盘，男女都可，来回踱步，理工学院内.dialogue-fd28286608e7f9daffe16318f8589022.tres"]
+
+[params]
+
+defaults=true

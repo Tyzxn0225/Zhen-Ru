@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bc123beef001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://chd3iu0rhal4m" path="res://Sprites/Items/Food/Beaf.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+value = 40.0
+icon = ExtResource("1_qh54l")
+id = "food_beef"
+name = "烤牛肉"
+description = "鲜嫩多汁的烤牛肉，恢复40点体力。"
+price = 8
+metadata/_custom_type_script = "uid://oady46xvsj7m"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://res001grass001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txgrass001" path="res://Sprites/Items/Resource/Grass.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+is_consumable = false
+max_stack = 100
+icon = ExtResource("1_qh54l")
+id = "resource_grass"
+name = "草药"
+description = "常见的草药，可用于制药和烹饪。"
+price = 3
+metadata/_custom_type_script = "uid://oady46xvsj7m"

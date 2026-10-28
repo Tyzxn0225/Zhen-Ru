@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cm6uq0oa88d10"
+path="res://.godot/imported/to puzzle 1 test.dialogue-35feee5666e549b44432e64181afd6ac.tres"
+
+[deps]
+
+source_file="res://data/dialogue/to puzzle 1 test.dialogue"
+dest_files=["res://.godot/imported/to puzzle 1 test.dialogue-35feee5666e549b44432e64181afd6ac.tres"]
+
+[params]
+
+defaults=true

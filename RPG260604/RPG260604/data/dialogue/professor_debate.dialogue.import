@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://f7i12ku5y7cx"
+path="res://.godot/imported/professor_debate.dialogue-7615653e52ef6a5ad85a6999d97e36a0.tres"
+
+[deps]
+
+source_file="res://data/dialogue/professor_debate.dialogue"
+dest_files=["res://.godot/imported/professor_debate.dialogue-7615653e52ef6a5ad85a6999d97e36a0.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://o5wqffsoodcc"
+path="res://.godot/imported/拼图游戏后.dialogue-4afe19694ce5e41577e4802d381e2b34.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/拼图游戏后.dialogue"
+dest_files=["res://.godot/imported/拼图游戏后.dialogue-4afe19694ce5e41577e4802d381e2b34.tres"]
+
+[params]
+
+defaults=true

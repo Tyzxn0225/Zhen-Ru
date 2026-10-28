@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://pro001dynamite001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txprojectiledynamite001" path="res://Sprites/Items/Projectile/Dynamite.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+is_consumable = true
+max_stack = 5
+icon = ExtResource("1_qh54l")
+id = "projectile_dynamite"
+name = "炸药"
+description = "强力炸药，可炸毁坚固的障碍物。"
+price = 50
+metadata/_custom_type_script = "uid://oady46xvsj7m"

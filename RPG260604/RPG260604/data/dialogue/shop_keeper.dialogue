@@ -1,0 +1,100 @@
+# 商店商人对话系统
+# 对话设计说明：
+# 1. 简化后的多阶段对话流程：
+#    - 第一阶段：问候与确认需求
+#    - 第二阶段：议价闲聊
+#    - 第三阶段：推荐商品并确认购买
+# 2. 通过 do 语句在对话中直接调用 Refs.hud.open_npc_panel() 来打开商店
+# 3. 只有在玩家确认购买时才会调用打开商店的函数
+
+~ start
+if GameData.shop_access_granted:
+	Shopkeeper: 欢迎回来，冒险者！今天需要些什么？
+	=> recommend_goods
+elif GameData.has_visited_shop:
+	Shopkeeper: 哦，又是你啊。上次的装备用得还顺手吗？
+	=> second_visit
+else:
+	Shopkeeper: 哟，欢迎欢迎！新面孔啊，我是这儿的店主。
+	Shopkeeper: 叫我老商人就行，这里卖的都是好东西，保证童叟无欺！
+	set GameData.has_visited_shop = true
+	=> first_time_greeting
+
+~ first_time_greeting
+Shopkeeper: 你是刚出道冒险的吧？让我猜猜，你是不是在找些趁手的装备？
+- 是的，我需要一些装备
+	Player: 是的，我需要一些装备。
+	Shopkeeper: 哈哈，果然不出我所料！做冒险者这行，装备可不能马虎。
+	=> negotiate_intro
+- 我只是随便看看
+	Player: 我只是随便看看。
+	Shopkeeper: (眯起眼睛) 随便看看？哼，我做生意这么多年，什么人没见过。
+	Shopkeeper: 你身上那股冒险者的气息，可是藏不住的。
+	=> browse_only
+- 你这儿东西靠谱吗？
+	Player: 你这儿东西靠谱吗？
+	Shopkeeper: (拍拍胸脯) 靠不靠谱，你试试就知道！
+	Shopkeeper: 假一罚十，你要是买到假货，我当场给你退款！
+	=> negotiate_intro
+
+~ negotiate_intro
+Shopkeeper: 说起来，咱们也算有缘。这样吧，你回答我一个问题。
+Shopkeeper: 你觉得做一个冒险者，最重要的是什么？
+- 实力，实力够强就能解决一切问题
+	Player: 实力，实力够强就能解决一切问题。
+	Shopkeeper: (摇摇头) 实力重要，但光有实力可不够。
+	Shopkeeper: 聪明的冒险者知道什么时候该进，什么时候该退。
+	Shopkeeper: 光靠蛮力可走不远啊，年轻人。
+	=> branch_wisdom
+- 运气，运气好才能活下来
+	Player: 运气，运气好才能活下来。
+	Shopkeeper: (点点头) 嗯，有道理。运气这东西确实很重要。
+	Shopkeeper: 但运气也是留给有准备的人的，你说是不是？
+	Shopkeeper: 不过你要是只靠运气，那迟早要栽跟头。
+	=> END
+- 人脉，有人帮衬才能走得更远
+	Player: 人脉，有人帮衬才能走得更远。
+	Shopkeeper: (眼睛一亮) 好！说得好！这才是明白人！
+	Shopkeeper: 做冒险者这一行，孤军奋战可不行。
+	Shopkeeper: 多个朋友多条路，这个道理很多人都懂，但做到的没几个。
+	Shopkeeper: 看你小伙子不错，我给你介绍些好东西！
+	set GameData.shop_access_granted = true
+	=> recommend_goods
+
+~ branch_wisdom
+Shopkeeper: 怎么样，要不要看看我的商品？说不定就有你需要的好东西。
+- 好，让我看看
+	Player: 好，让我看看。
+	Shopkeeper: 这就对了嘛！来来来，里边请！
+	=> recommend_goods
+- 不了，我还是再考虑考虑
+	Player: 不了，我还是再考虑考虑。
+	Shopkeeper: 行，考虑好了再来。不过说好了，我这儿的优惠可不等人的！
+	=> END
+
+~ browse_only
+Shopkeeper: 对了，你要是有朋友需要装备，记得介绍来我这儿啊。
+- 好啊，让我开开眼界
+	Player: 好啊，让我开开眼界。
+	Shopkeeper: 这就对了嘛！来来来，里边请！
+	=> recommend_goods
+- 算了，我还是不买了
+	Player: 算了，我还是不买了。
+	Shopkeeper: 没关系，买卖不成仁义在。以后有需要随时来。
+	=> END
+
+~ second_visit
+Shopkeeper: 上次聊得挺开心的，要不咱们再聊聊？
+Shopkeeper: 正好我最近进了一批新货，还没来得及给你介绍呢。
+- 好的，有什么好东西？
+	Player: 好的，有什么好东西？
+	Shopkeeper: 哟，你来得正好！来来来，我给你介绍介绍！
+	=> recommend_goods
+- 不了
+	Player: 不了，我自己逛逛。
+	Shopkeeper: 行，那你随便看。有问题叫我。
+	=> END
+
+~ recommend_goods
+Shopkeeper: 我这儿新到了一批铁剑和皮甲，适合新手冒险者使用。
+do Refs.hud.open_npc_panel(NPC.NpcType.SHOP)

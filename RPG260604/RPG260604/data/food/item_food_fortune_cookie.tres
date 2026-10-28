@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://abc123fortunecookie001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txfortunecookie001" path="res://Sprites/Items/Food/FortuneCookie.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 0
+is_consumable = true
+value = 15.0
+max_stack = 30
+icon = ExtResource("1_qh54l")
+id = "food_fortune_cookie"
+name = "幸运饼干"
+description = "神秘的幸运饼干，恢复15点体力，据说能带来好运。"
+price = 2
+metadata/_custom_type_script = "uid://oady46xvsj7m"

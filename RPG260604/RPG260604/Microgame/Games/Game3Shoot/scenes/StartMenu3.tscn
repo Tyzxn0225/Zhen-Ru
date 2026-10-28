@@ -1,0 +1,197 @@
+[gd_scene load_steps=8 format=3 uid="uid://bo4h78odfrtmd"]
+
+[ext_resource type="Script" uid="uid://p4lld11qeeou" path="res://Microgame/Games/Game3Shoot/scripts/StartMenu3.gd" id="1_0kvbd"]
+[ext_resource type="Texture2D" uid="uid://dgpgui5gk8ndo" path="res://Microgame/Games/Game3Shoot/assets/images/start.png" id="1_11mgc"]
+[ext_resource type="FontFile" uid="uid://bvyjj5oaoxgr3" path="res://Microgame/Games/Game3Shoot/assets/fonts/Uranus_Pixel_11Px.ttf" id="2_sc6tc"]
+[ext_resource type="Texture2D" uid="uid://nypstbxkj88e" path="res://Microgame/Games/shared/assets/images/UI-press1.png" id="3_l6us3"]
+[ext_resource type="Texture2D" uid="uid://dlg0nwlqnwigv" path="res://Microgame/Games/shared/assets/images/UI-prepare4.png" id="5_o7tw5"]
+[ext_resource type="Texture2D" uid="uid://o1waglo3d7np" path="res://Microgame/Games/shared/assets/images/UI-prepare1.png" id="6_0y8sy"]
+[ext_resource type="AudioStream" uid="uid://bqklo6xe0i0mc" path="res://Microgame/Games/shared/assets/audio/press1.wav" id="7_o7tw5"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0kvbd")
+
+[node name="start" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -565.00006
+offset_top = -345.0
+offset_right = 2167.0
+offset_bottom = 1189.0
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("1_11mgc")
+
+[node name="Main" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -280.0
+offset_top = -200.0
+offset_right = 520.0
+offset_bottom = 8.0
+
+[node name="Label" type="Label" parent="Main"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.3779188, 0.37791887, 0.37791884, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_sc6tc")
+theme_override_font_sizes/font_size = 150
+text = "射击靶场"
+
+[node name="Control" type="Control" parent="Main"]
+layout_mode = 2
+
+[node name="Buttons" type="VBoxContainer" parent="Main"]
+layout_mode = 2
+
+[node name="begin" type="Sprite2D" parent="Main/Buttons"]
+position = Vector2(280, 100)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_l6us3")
+
+[node name="begin1" type="Button" parent="Main/Buttons/begin"]
+offset_left = -409.99997
+offset_top = -99.99999
+offset_right = 398.00003
+offset_bottom = 108.00001
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sc6tc")
+theme_override_font_sizes/font_size = 200
+text = "开始游戏"
+flat = true
+
+[node name="Difficulty" type="VBoxContainer" parent="Main"]
+visible = false
+layout_mode = 2
+
+[node name="easy" type="Sprite2D" parent="Main/Difficulty"]
+position = Vector2(280, 60)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_l6us3")
+
+[node name="easy1" type="Button" parent="Main/Difficulty/easy"]
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 208.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_sc6tc")
+theme_override_font_sizes/font_size = 200
+text = "简单"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="normal" type="Sprite2D" parent="Main/Difficulty"]
+position = Vector2(280, 180)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_l6us3")
+
+[node name="normal1" type="Button" parent="Main/Difficulty/normal"]
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 208.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_sc6tc")
+theme_override_font_sizes/font_size = 200
+text = "普通"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="hard" type="Sprite2D" parent="Main/Difficulty"]
+position = Vector2(280, 300)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_l6us3")
+
+[node name="hard1" type="Button" parent="Main/Difficulty/hard"]
+offset_left = -200.0
+offset_top = -100.0
+offset_right = 208.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_sc6tc")
+theme_override_font_sizes/font_size = 200
+text = "困难"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 402.0
+offset_top = -288.0
+offset_right = 492.0
+offset_bottom = -240.0
+theme_override_fonts/font = ExtResource("2_sc6tc")
+theme_override_font_sizes/font_size = 20
+text = "返回"
+
+[node name="prepare1" type="Sprite2D" parent="."]
+position = Vector2(-480, -250)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_o7tw5")
+
+[node name="PreButton" type="Button" parent="prepare1"]
+custom_minimum_size = Vector2(280, 280)
+offset_left = -140.0
+offset_top = -150.0
+offset_right = 160.0
+offset_bottom = 150.0
+flat = true
+
+[node name="prepare2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(35, -10)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("6_0y8sy")
+
+[node name="TextEdit1" type="TextEdit" parent="prepare2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1786.002
+offset_top = -1347.0
+offset_right = 413.99805
+offset_bottom = -847.00006
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+theme_override_fonts/font = ExtResource("2_sc6tc")
+theme_override_font_sizes/font_size = 500
+text = " 游戏规则"
+
+[node name="TextEdit2" type="TextEdit" parent="prepare2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1872.6666
+offset_top = -1127.0
+offset_right = 977.3335
+offset_bottom = 2173.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+theme_override_fonts/font = ExtResource("2_sc6tc")
+theme_override_font_sizes/font_size = 300
+text = "    
+     在目标靶子越过
+  障碍前击中它们吧！
+
+ 击中足够的目标数量
+           即可获胜！
+
+         移动：WASD
+         射击：Space
+                （空格键）"
+
+[node name="PressAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_o7tw5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(0.582, 1)
+zoom = Vector2(2.3, 2.1)

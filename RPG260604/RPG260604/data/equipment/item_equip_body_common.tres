@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://owfgumjvy08l"]
+
+[ext_resource type="Script" uid="uid://bs00b1lhbq4pj" path="res://data/equipment/equip_data.gd" id="1_wf1cp"]
+[ext_resource type="Texture2D" uid="uid://gxhpkqg1bdkx" path="res://Sprites/Equipment/placeholder_body.png" id="1_wo1e3"]
+
+[resource]
+script = ExtResource("1_wf1cp")
+equip_type = 1
+type = 4
+max_stack = 1
+icon = ExtResource("1_wo1e3")
+id = "equip_body"
+name = "普通衣"
+price = 20
+metadata/_custom_type_script = "uid://bs00b1lhbq4pj"

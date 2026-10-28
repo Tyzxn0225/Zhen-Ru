@@ -1,0 +1,39 @@
+# 初音未来 · Miku
+# 人物设定：
+#   姓名：Miku
+#   身份：来自远方的歌姬
+#   性格：活泼可爱，喜欢唱歌，偶尔会说出让这个世界的人听不懂的话
+#   口头禅："啦啦啦~♪"
+
+
+~ start
+Senior: 嘿，你是新生吧？看你在门口看地图，是找不到路吗？
+- 啊，是的...我有点分不清方向，在找宿舍楼。
+Senior: 别急，我今天正好没事，带你去吧。走这边。
+do Refs.current_npc.move_waypoints([Vector2(474, 328),Vector2(178, 320)], 80)
+-啊谢谢！(赶紧跟上去)
+do Refs.player.story_move_waypoints([Vector2(470, 412),Vector2(474, 328),Vector2(204, 320)], 80)
+
+Senior: 我叫林辰，大二计算机系的，叫我学长就行。
+- 谢谢学长！我叫Player，大一中文系的新生。
+Senior: 中文系啊，那文商学院楼你以后会常去。
+do Refs.current_npc.move_waypoints([Vector2(90, 116),Vector2(90, 362)], 80)
+do Refs.current_npc.move_waypoints([Vector2(90, 362)], 80)
+Senior: 你看右前方那栋灰色的楼，那就是文商学院，中文系的办公室和部分专业课教室都在里面。
+- 原来在那里，我记住了。学校好像比我想象中大很多...
+Senior: 其实熟悉了就不觉得大。左边这栋玻璃幕墙的是理工楼，里面实验室很多。
+Senior: 我基本天天泡在里面。食堂就在两栋楼之间，一会儿路过你可以看一眼。
+- 好的，幸好有学长带路，不然我真的会迷路。
+do Refs.player.wait_for_move()
+do Refs.current_npc.wait_for_move()
+Senior: 前面那排红色的建筑就是宿舍区了。你住几号楼？
+- 我看看...通知书上写的是3号楼。
+Senior: 3号楼就是中间那栋，很近，走两步就到。
+- 太感谢了！
+	-太感谢了！今天真的帮了大忙。
+	Senior: 不客气，欢迎来到咱们学校。
+	Senior: 以后有什么不懂的可以随时问我，我一般都在这附近。
+	Senior: 那我就不送你上去了，快去收拾宿舍吧，记得休息一下。
+	- 嗯！学长再见！
+	do Refs.current_npc.move_waypoints([Vector2(96, -280) ], 80)
+	do Refs.current_npc.wait_for_move()

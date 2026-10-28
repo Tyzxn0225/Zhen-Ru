@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cgeahxfet1t71"
+path="res://.godot/imported/戏剧社拉人，女，不动，大礼堂内.dialogue-c51aac2aa06b98b219094129cf06eb50.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/戏剧社拉人，女，不动，大礼堂内.dialogue"
+dest_files=["res://.godot/imported/戏剧社拉人，女，不动，大礼堂内.dialogue-c51aac2aa06b98b219094129cf06eb50.tres"]
+
+[params]
+
+defaults=true

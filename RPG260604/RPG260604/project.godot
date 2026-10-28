@@ -1,0 +1,139 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="RPG26051"
+run/main_scene="uid://cmmgllhml30sa"
+config/features=PackedStringArray("4.5", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+EventBus="*uid://qsdafxc04dyr"
+Inventory="*uid://cau771mcg0cjt"
+Refs="*uid://bqieebmbsggte"
+GameData="*uid://lu4i5mdl17uy"
+ItemEffectHandler="res://autoloads/item_effect_handler.gd"
+ResourceIndex="res://autoloads/resource_index.gd"
+Transition="*res://autoloads/transition.tscn"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+LongSceneManager="*res://addons/long_scene_manager/autoload/long_scene_manager.gd"
+PauseManager="*res://autoloads/pause_manager.gd"
+GameSettings="*res://autoloads/game_settings.gd"
+SaveManager="*res://autoloads/save_manager.gd"
+UIManager="*res://autoloads/ui_manager.gd"
+MicroGameManage="*res://Microgame/Games/main/scripts/MicroGameManage.gd"
+QuestSystem="*res://autoloads/quest_system.gd"
+
+[dialogue_manager]
+
+runtime/balloon_path="res://Scenes/dialogue_panel/balloon.tscn"
+
+[display]
+
+window/size/viewport_width=2560
+window/size/viewport_height=1440
+window/size/always_on_top=true
+window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/long_scene_manager/plugin.cfg")
+
+[input]
+
+ui_cancel={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+move_left={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
+]
+}
+move_right={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
+]
+}
+move_up={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
+]
+}
+move_down={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
+]
+}
+attack={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":74,"key_label":0,"unicode":106,"location":0,"echo":false,"script":null)
+]
+}
+debug_damage={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":49,"key_label":0,"unicode":49,"location":0,"echo":false,"script":null)
+]
+}
+open={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
+]
+}
+interact={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
+switch_interact_target={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194306,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+fire={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
+]
+}
+"测试键"={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":76,"key_label":0,"unicode":108,"location":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://data/dialogue/untitled.dialogue", "res://data/dialogue/Lin wenxuan.dialogue", "res://data/dialogue/shop_keeper.dialogue", "res://data/dialogue/nathan.dialogue", "res://data/dialogue/cave_girl.dialogue", "res://data/dialogue/cave_lion.dialogue", "res://data/dialogue/demon_green.dialogue", "res://data/dialogue/demon_red.dialogue", "res://data/dialogue/fighter_red.dialogue", "res://data/dialogue/test_miku.dialogue", "res://data/dialogue/to puzzle 1 test.dialogue", "res://data/dialogue/103 to box.dialogue", "res://data/dialogue/professor_debate.dialogue", "res://data/dialogue/测试 入学.dialogue", "res://data/dialogue/陈景明.dialogue", "res://data/dialogue/260604dialogue/闹鬼正文.dialogue", "res://data/dialogue/260604dialogue/闹鬼引入，男女都可，动，宿舍外广场，.dialogue", "res://data/dialogue/260604dialogue/踢球，体育生男，动，操场.dialogue", "res://data/dialogue/260604dialogue/背诗经，男女都可，动，食堂外.dialogue", "res://data/dialogue/260604dialogue/经济学诀窍，男女都可，不动，文商学院内.dialogue", "res://data/dialogue/260604dialogue/练习演讲，男女都可，来回踱步，文商学院内.dialogue", "res://data/dialogue/260604dialogue/法国学生学习，金发男，不动，图书馆前.dialogue", "res://data/dialogue/260604dialogue/李婶闲聊，中年女，动，宿舍外广场，.dialogue", "res://data/dialogue/260604dialogue/数圈②，男，动，操场.dialogue", "res://data/dialogue/260604dialogue/数圈①，男，动，操场.dialogue", "res://data/dialogue/260604dialogue/推箱子后.dialogue", "res://data/dialogue/260604dialogue/推箱子前.dialogue", "res://data/dialogue/260604dialogue/换发型，赵明霞闲聊，不动，图书馆附近.dialogue", "res://data/dialogue/260604dialogue/拼图游戏后.dialogue", "res://data/dialogue/260604dialogue/拼图游戏前.dialogue", "res://data/dialogue/260604dialogue/打算盘，男女都可，来回踱步，理工学院内.dialogue", "res://data/dialogue/260604dialogue/戏剧社拉人，女，不动，大礼堂内.dialogue", "res://data/dialogue/260604dialogue/序章独白.dialogue", "res://data/dialogue/260604dialogue/尝试新菜，男女都可，不动，食堂外.dialogue", "res://data/dialogue/260604dialogue/和中学生说英语②，男女都可，不动，中学部附近.dialogue", "res://data/dialogue/260604dialogue/和中学生说英语①，男女都可，不动，中学部附近.dialogue", "res://data/dialogue/260604dialogue/初遇赵明霞谈女子读书，不动，图书馆附近.dialogue", "res://data/dialogue/260604dialogue/写生，男女都可，不动，河水附近.dialogue", "res://data/dialogue/260604dialogue/借物理笔记，男女都可，动，理工学院内.dialogue", "res://data/dialogue/260604dialogue/俩教授吵架，俩男，不动，文商学院.dialogue", "res://data/dialogue/260604dialogue/交作业，男女都可，不动，文商学院内.dialogue", "res://data/dialogue/260604dialogue/买糖葫芦，老年男，不动，校门口.dialogue", "res://data/dialogue/260604dialogue/周先生.dialogue", "res://data/dialogue/260604dialogue/陈景明2.dialogue", "res://data/dialogue/260604dialogue/苏婉清.dialogue", "res://data/dialogue/测试任务.dialogue", "res://data/dialogue/测试任务2.dialogue")
+
+[layer_names]
+
+2d_physics/layer_1="world"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Enemy"
+2d_physics/layer_4="npc"
+2d_physics/layer_5="可交互物"
+2d_physics/layer_6="玩家交互"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"

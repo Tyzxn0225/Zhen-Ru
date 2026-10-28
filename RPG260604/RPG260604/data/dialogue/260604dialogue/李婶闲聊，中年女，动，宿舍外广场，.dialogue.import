@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bb11olic2hpcm"
+path="res://.godot/imported/李婶闲聊，中年女，动，宿舍外广场，.dialogue-a31400be6b5bd9d194c1480b6304b032.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/李婶闲聊，中年女，动，宿舍外广场，.dialogue"
+dest_files=["res://.godot/imported/李婶闲聊，中年女，动，宿舍外广场，.dialogue-a31400be6b5bd9d194c1480b6304b032.tres"]
+
+[params]
+
+defaults=true

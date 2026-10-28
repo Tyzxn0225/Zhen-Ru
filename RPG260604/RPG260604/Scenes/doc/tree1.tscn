@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=3 uid="uid://ym4m2y6bqtlv"]
+
+[ext_resource type="Script" uid="uid://c5o1j86x80gik" path="res://Scenes/town/build/building_occlusion.gd" id="1_0ksar"]
+[ext_resource type="Texture2D" uid="uid://b0ur56jpj01nt" path="res://sample/Tiny Swords (Free Pack)/Terrain/Resources/Wood/Trees/Tree3.png" id="2_ohxhw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8sw3"]
+atlas = ExtResource("2_ohxhw")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktql6"]
+atlas = ExtResource("2_ohxhw")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ck4el"]
+atlas = ExtResource("2_ohxhw")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2r4pc"]
+atlas = ExtResource("2_ohxhw")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwhpe"]
+atlas = ExtResource("2_ohxhw")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33q6g"]
+atlas = ExtResource("2_ohxhw")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpq83"]
+atlas = ExtResource("2_ohxhw")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uoa4b"]
+atlas = ExtResource("2_ohxhw")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w7jmf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8sw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ktql6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ck4el")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2r4pc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwhpe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33q6g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpq83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uoa4b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfuwn"]
+size = Vector2(8, 8)
+
+[node name="StaticBody2D" type="StaticBody2D" node_paths=PackedStringArray("mask_polygon", "target_sprite")]
+y_sort_enabled = true
+script = ExtResource("1_0ksar")
+mask_polygon = NodePath("Polygon2D")
+target_sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_w7jmf")
+autoplay = "default"
+frame_progress = 0.32412073
+offset = Vector2(0, -64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_sfuwn")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(0, -32)
+color = Color(0.53333336, 1, 1, 0.28235295)
+polygon = PackedVector2Array(22, 16, 24, 10, 24, -8, 20, -14, 20, -26, 8, -38, -8, -38, -18, -32, -18, -16, -24, -6, -24, 8, -20, 16, -10, 24, -6, 24, 8, 24, 14, 24)

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://ca1ddnl3hv0cb"]
+
+[ext_resource type="Script" uid="uid://kk5n7wr6tkks" path="res://data/dialogue/dialogue_data.gd" id="1_2atkj"]
+[ext_resource type="Texture2D" uid="uid://dk6124uukynwp" path="res://Sprites/Actor/Characters/Cavegirl/Faceset.png" id="2_faceset"]
+
+[resource]
+script = ExtResource("1_2atkj")
+npc_name = "Cave Girl"
+npc_icom = ExtResource("2_faceset")
+line = Array[String](["Hi there!", "Nice to meet you."])

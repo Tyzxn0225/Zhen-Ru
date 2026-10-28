@@ -1,0 +1,59 @@
+# 青鬼 · 碧瞳
+# 人物设定：
+#   姓名：碧瞳
+#   种族：鬼族（绿鬼分支）
+#   性格：外表凶悍内心温柔，喜欢园艺和泡茶，讨厌被当成坏人
+#   口头禅："我才不是坏蛋！"
+
+
+~ start
+match GameData.demongreen_meet_count
+	when 0:
+		set GameData.demongreen_meet_count = 1
+		JadeEye: (蹲在地上摆弄一朵小花，听到脚步声猛地站起来)
+		JadeEye: 站住！你……你别怕，我不咬人。
+		JadeEye: 我知道我看上去很凶，但我真的只是在这里种花而已！
+		- 你在种花？
+			Player: 你在种花？
+			JadeEye: (眼睛一亮) 对！你看这朵蓝色的小花，是我从山崖上移植下来的。
+			JadeEye: 这里阳光好，土也软，最适合种花了！
+			=> first_meet_end
+		- 你确实看起来不太友善
+			Player: 你确实看起来不太友善……
+			JadeEye: (耳朵耷拉下来) 我就知道……每个人都这么说。
+			JadeEye: 我天生就长这样啊！又不能回炉重造！
+			JadeEye: 算了，你至少没拔腿就跑，比上一个路人强多了。
+			=> first_meet_end
+
+	when 1:
+		set GameData.demongreen_meet_count = 2
+		JadeEye: 你来得正好！尝尝我泡的花茶！
+		JadeEye: (递过来一杯冒着热气的茶) 用我自己种的茉莉花泡的，可香了。
+		- (喝一口) 真好喝
+			Player: (喝了一口) 真好喝！
+			JadeEye: (害羞地搓手) 真的吗？太好了！
+			JadeEye: 这配方是我奶奶教的。她说就算做鬼，也要做个有情调的鬼。
+			=> END
+		- 这里面不会有毒吧？
+			Player: 这里面不会有毒吧？
+			JadeEye: (气得跳起来) 你！你这个人！
+			JadeEye: 我要是想害人还会种花泡茶吗？！会一刀下去不就完了！
+			JadeEye: ……算了，不跟你计较。不喝还我。
+			=> END
+
+	else:
+		JadeEye: 嗨！来看花吗？今天开了一朵新的！
+		JadeEye: 是那种橘黄色的小花，叫金盏菊。要不要闻闻？
+		- 好的！
+			Player: 好的！
+			JadeEye: (蹲下去指着小花) 你看，花瓣还没完全展开呢。明天早上应该就全开了。
+			=> END
+		- 我不太懂花
+			Player: 我不太懂花，但我喜欢喝茶。
+			JadeEye: 那我再给你泡一杯！正好茉莉又开了一批！
+			=> END
+
+~ first_meet_end
+JadeEye: 如果你遇到其他鬼族，帮我跟他们说一声——碧瞳不是坏蛋！碧瞳是个好鬼！
+JadeEye: 这里的每一朵花都可以作证！
+=> END

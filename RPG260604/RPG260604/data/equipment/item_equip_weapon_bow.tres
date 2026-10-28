@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://crc7cdi0dtgyq"]
+
+[ext_resource type="Texture2D" uid="uid://txweaponbow001" path="res://Sprites/Items/Weapons/Bow/Sprite.png" id="1_h3cka"]
+[ext_resource type="Script" uid="uid://bs00b1lhbq4pj" path="res://data/equipment/equip_data.gd" id="2_wbqny"]
+
+[resource]
+script = ExtResource("2_wbqny")
+equip_type = 3
+type = 4
+max_stack = 1
+icon = ExtResource("1_h3cka")
+id = "equip_weapon_bow"
+name = "长弓"
+description = "射程较远的弓箭武器。"
+price = 45
+metadata/_custom_type_script = "uid://bs00b1lhbq4pj"

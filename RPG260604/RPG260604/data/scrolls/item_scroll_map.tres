@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://chn7r2gx71vnc"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://ben30w3yjtq3l" path="res://sample/minimap/mini map with tree2.png" id="1_debnx"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+category = 3
+is_consumable = true
+icon = ExtResource("1_debnx")
+id = "map_scrawl"
+name = "潦草的地图"
+description = "一份手绘的校园地图，线条潦草但主要地点都有画。右键使用后可在界面右上角显示小地图。"
+metadata/_custom_type_script = "uid://oady46xvsj7m"

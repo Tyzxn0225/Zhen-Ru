@@ -1,0 +1,24 @@
+# 第二幕：宿舍场景（推箱子前）
+# 场景：第二斋宿舍
+# 涉及人物：Player、陆子晴
+
+
+~ start
+陆子晴: 哎呀，可算把你等来了！我叫陆子晴，南洋回来的侨生，读商科。以后咱们就是同屋的姐妹啦，别客套，有事儿喊一声就成！
+Player: 子晴姐好！我叫player。
+陆子晴: 来，先把行李放下，咱俩把这屋子归置归置。我刚把床铺好，还没来得及收拾别处。两个人动手比一个人闷头干快多啦！你负责清理杂物、擦桌椅，我来搬重物、扫地——怎么样？
+- 分配得明明白白！开工！
+set GameData.pending_dialogue_resource_path = "res://data/dialogue/260604dialogue/推箱子前.dialogue"
+set GameData.pending_dialogue_title = "box_return"
+do UIManager.switch_scene_with_transition("res://Microgame/box/box game.tscn",null,"")
+=> END
+
+
+
+~ box_return
+Player: 说实话，刚来的时候心里还挺慌的。现在嘛……有你这么一位爽快的室友，我一下子就踏实了。子晴姐，你真靠谱！
+陆子晴: 那是！我这个人，别的不敢说，靠得住是肯定的。我跟你说，我从南洋跑回来读书，就是冲着暨南的"忠信笃敬"四个字。咱们在这儿好好用功，将来不论留在故土还是回到南洋，都得对得起这身学生装。
+Player: 嗯！一起加油。
+do QuestSystem.完成阶段("安顿下来",1)
+=> END
+

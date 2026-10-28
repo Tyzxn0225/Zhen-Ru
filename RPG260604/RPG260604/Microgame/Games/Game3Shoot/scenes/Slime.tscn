@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://c4ywvh837ck13"]
+
+[ext_resource type="Script" uid="uid://c5tm4cwhbrce7" path="res://Microgame/Games/Game3Shoot/scripts/enemy.gd" id="1_lad5o"]
+[ext_resource type="Texture2D" uid="uid://5gbn55nlywl8" path="res://Microgame/Games/Game3Shoot/assets/images/SlimerDeath.png" id="2_wixkm"]
+[ext_resource type="Texture2D" uid="uid://dmcrl01kowswq" path="res://Microgame/Games/Game3Shoot/assets/images/goat.png" id="3_2y0oy"]
+[ext_resource type="AudioStream" uid="uid://kqxxdv0mfpkv" path="res://Microgame/Games/Game3Shoot/assets/sounds/EnemyDeath.mp3" id="4_k0e8y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03y56"]
+atlas = ExtResource("2_wixkm")
+region = Rect2(0, 0, 390, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2rx5"]
+atlas = ExtResource("2_wixkm")
+region = Rect2(390, 0, 390, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6hwm"]
+atlas = ExtResource("2_wixkm")
+region = Rect2(780, 0, 390, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsrun"]
+atlas = ExtResource("2_wixkm")
+region = Rect2(1170, 0, 390, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gl0q5"]
+atlas = ExtResource("2_wixkm")
+region = Rect2(1560, 0, 390, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hff00"]
+atlas = ExtResource("2_wixkm")
+region = Rect2(1950, 0, 390, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swgo6"]
+atlas = ExtResource("2_wixkm")
+region = Rect2(2340, 0, 390, 349)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s60mi"]
+atlas = ExtResource("3_2y0oy")
+region = Rect2(0, 0, 455, 1534)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ig7sf"]
+atlas = ExtResource("3_2y0oy")
+region = Rect2(455, 0, 455, 1534)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3em8a"]
+atlas = ExtResource("3_2y0oy")
+region = Rect2(910, 0, 455, 1534)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_af7wj"]
+atlas = ExtResource("3_2y0oy")
+region = Rect2(1365, 0, 455, 1534)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekb8x"]
+atlas = ExtResource("3_2y0oy")
+region = Rect2(1820, 0, 455, 1534)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5a8k"]
+atlas = ExtResource("3_2y0oy")
+region = Rect2(2275, 0, 455, 1534)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wskm2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03y56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2rx5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6hwm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsrun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gl0q5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hff00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swgo6")
+}],
+"loop": true,
+"name": &"death",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s60mi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ig7sf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3em8a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_af7wj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekb8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5a8k")
+}],
+"loop": true,
+"name": &"goat",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6pt0x"]
+
+[node name="Slime" type="Area2D" unique_id=1441603694]
+script = ExtResource("1_lad5o")
+slime_speed = -50.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1474425381]
+scale = Vector2(0.22, 0.22)
+sprite_frames = SubResource("SpriteFrames_wskm2")
+animation = &"goat"
+autoplay = "goat"
+frame = 3
+frame_progress = 0.42774057
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1015935863]
+position = Vector2(-2, -5)
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_6pt0x")
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=1658544127]
+stream = ExtResource("4_k0e8y")
+volume_db = -10.0
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

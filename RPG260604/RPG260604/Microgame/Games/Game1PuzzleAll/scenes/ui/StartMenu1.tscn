@@ -1,0 +1,254 @@
+[gd_scene load_steps=8 format=4 uid="uid://p4px6q8vnil6"]
+
+[ext_resource type="Script" uid="uid://b711vdor8uavu" path="res://Microgame/Games/Game1PuzzleAll/scripts/ui/StartMenu1.gd" id="1_tvu2r"]
+[ext_resource type="Texture2D" uid="uid://dfe6jcawe2tqq" path="res://Microgame/Games/Game1PuzzleAll/assets/images/start.png" id="2_3n77g"]
+[ext_resource type="FontFile" uid="uid://baoboilecx6mo" path="res://Microgame/Games/Game1PuzzleAll/assets/fonts/fusion-pixel-12px-monospaced-zh_hans.ttf" id="3_b2qb0"]
+[ext_resource type="Texture2D" uid="uid://nypstbxkj88e" path="res://Microgame/Games/shared/assets/images/UI-press1.png" id="4_r2rh6"]
+[ext_resource type="Texture2D" uid="uid://dlg0nwlqnwigv" path="res://Microgame/Games/shared/assets/images/UI-prepare4.png" id="5_i0h6u"]
+[ext_resource type="Texture2D" uid="uid://o1waglo3d7np" path="res://Microgame/Games/shared/assets/images/UI-prepare1.png" id="6_xg4a4"]
+
+[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_a5jl1"]
+data = PackedByteArray("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")
+format = 3
+mix_rate = 22050
+tags = {
+"date": "2000-01-19",
+"encoder": "Sound Forge 4.0;Sound Forge 4.5",
+"engineer": "Jason Hayes"
+}
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tvu2r")
+
+[node name="start" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -255.0
+offset_top = -147.0
+offset_right = -255.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_3n77g")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Background" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.101960786, 0.18039216, 1)
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -320.0
+offset_right = 320.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="MainContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("3_b2qb0")
+theme_override_font_sizes/font_size = 200
+text = "拼图游戏"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="MainContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="start" type="Sprite2D" parent="MainContainer/ButtonsContainer"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(400, 150)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_r2rh6")
+
+[node name="StartButton" type="Button" parent="MainContainer/ButtonsContainer/start"]
+modulate = Color(0.1148968, 0.11489681, 0.1148968, 1)
+custom_minimum_size = Vector2(150, 50)
+offset_left = -370.0
+offset_top = -105.00007
+offset_right = 400.0
+offset_bottom = 104.99993
+theme_override_fonts/font = ExtResource("3_b2qb0")
+theme_override_font_sizes/font_size = 190
+text = "开始游戏"
+flat = true
+
+[node name="exit" type="Sprite2D" parent="MainContainer/ButtonsContainer"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(400, 450)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_r2rh6")
+
+[node name="ExitButton" type="Button" parent="MainContainer/ButtonsContainer/exit"]
+modulate = Color(0.11372549, 0.11372549, 0.11372549, 1)
+custom_minimum_size = Vector2(150, 50)
+offset_left = -370.0
+offset_top = -105.0
+offset_right = 398.0
+offset_bottom = 94.0
+theme_override_fonts/font = ExtResource("3_b2qb0")
+theme_override_font_sizes/font_size = 190
+text = "退出游戏"
+flat = true
+
+[node name="DifficultyContainer" type="HBoxContainer" parent="MainContainer"]
+visible = false
+layout_mode = 2
+alignment = 1
+
+[node name="easy" type="Sprite2D" parent="MainContainer/DifficultyContainer"]
+position = Vector2(400, 100)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_r2rh6")
+
+[node name="EasyButton" type="Button" parent="MainContainer/DifficultyContainer/easy"]
+modulate = Color(0.11372549, 0.11372549, 0.11372549, 1)
+custom_minimum_size = Vector2(120, 40)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -533.33325
+offset_top = -153.33337
+offset_right = -2215.3333
+offset_bottom = -1387.3335
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_b2qb0")
+theme_override_font_sizes/font_size = 190
+text = "简单"
+flat = true
+
+[node name="normal" type="Sprite2D" parent="MainContainer/DifficultyContainer"]
+position = Vector2(400, 350)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_r2rh6")
+
+[node name="NormalButton" type="Button" parent="MainContainer/DifficultyContainer/normal"]
+modulate = Color(0.11372549, 0.11372549, 0.11372549, 1)
+custom_minimum_size = Vector2(120, 40)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -519.9999
+offset_top = -153.3334
+offset_right = -2202.0
+offset_bottom = -1387.3335
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_b2qb0")
+theme_override_font_sizes/font_size = 190
+text = "普通"
+flat = true
+
+[node name="hard" type="Sprite2D" parent="MainContainer/DifficultyContainer"]
+position = Vector2(400, 600)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_r2rh6")
+
+[node name="HardButton" type="Button" parent="MainContainer/DifficultyContainer/hard"]
+modulate = Color(0.11372549, 0.11372549, 0.11372549, 1)
+custom_minimum_size = Vector2(120, 40)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -520.0
+offset_top = -160.00024
+offset_right = -2202.0
+offset_bottom = -1394.0002
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_b2qb0")
+theme_override_font_sizes/font_size = 190
+text = "困难"
+flat = true
+
+[node name="BackButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 2200.0
+offset_top = 150.0
+offset_right = 2408.0
+offset_bottom = 259.0
+theme_override_fonts/font = ExtResource("3_b2qb0")
+theme_override_font_sizes/font_size = 100
+text = "返回"
+
+[node name="prepare" type="Sprite2D" parent="."]
+position = Vector2(200, 200)
+scale = Vector2(0.54, 0.54)
+texture = ExtResource("5_i0h6u")
+
+[node name="pre_Button" type="Button" parent="prepare"]
+offset_left = -120.0
+offset_top = -126.666664
+offset_right = 133.33331
+offset_bottom = 133.33334
+flat = true
+
+[node name="prepare1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1262, 713)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("6_xg4a4")
+
+[node name="TextEdit1" type="TextEdit" parent="prepare1"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1849.3333
+offset_top = -363.3333
+offset_right = -1054.6667
+offset_bottom = -136.66656
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_b2qb0")
+theme_override_font_sizes/font_size = 190
+text = "游戏规则"
+
+[node name="TextEdit2" type="TextEdit" parent="prepare1"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1916.0
+offset_top = 60.000015
+offset_right = -955.9999
+offset_bottom = 342.66663
+grow_horizontal = 2
+theme_override_colors/search_result_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_b2qb0")
+theme_override_font_sizes/font_size = 120
+text = " 在倒计时结束前
+   完成拼图吧！"
+
+[node name="PressAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamWAV_a5jl1")
+volume_db = 5.0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dc6fx0vgu2jat"
+path="res://.godot/imported/换发型，赵明霞闲聊，不动，图书馆附近.dialogue-aea8a1488a6729e6d7a6dfa76868fd9e.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/换发型，赵明霞闲聊，不动，图书馆附近.dialogue"
+dest_files=["res://.godot/imported/换发型，赵明霞闲聊，不动，图书馆附近.dialogue-aea8a1488a6729e6d7a6dfa76868fd9e.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://mp70c1ena5sn"]
+
+[ext_resource type="Texture2D" uid="uid://bf3kx0rce6k0x" path="res://Sprites/Equipment/placeholder_helmet.png" id="1_h7b48"]
+[ext_resource type="Script" uid="uid://bs00b1lhbq4pj" path="res://data/equipment/equip_data.gd" id="2_36yi7"]
+
+[resource]
+script = ExtResource("2_36yi7")
+type = 4
+max_stack = 1
+icon = ExtResource("1_h7b48")
+id = "equip_helmet"
+name = "普通头盔"
+price = 20
+metadata/_custom_type_script = "uid://bs00b1lhbq4pj"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://bd2mq3a3ma6o7"]
+
+[ext_resource type="Texture2D" uid="uid://txweaponbigsword001" path="res://Sprites/Items/Weapons/BigSword/Sprite.png" id="1_h3cka"]
+[ext_resource type="Script" uid="uid://bs00b1lhbq4pj" path="res://data/equipment/equip_data.gd" id="2_wbqny"]
+
+[resource]
+script = ExtResource("2_wbqny")
+equip_type = 3
+type = 4
+max_stack = 1
+icon = ExtResource("1_h3cka")
+id = "equip_weapon_big_sword"
+name = "巨剑"
+description = "巨大的双手剑，威力惊人。"
+price = 100
+metadata/_custom_type_script = "uid://bs00b1lhbq4pj"

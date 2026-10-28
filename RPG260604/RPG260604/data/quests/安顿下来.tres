@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="QuestData" load_steps=4 format=3 uid="uid://cq6wcnupdp6kl"]
+
+[ext_resource type="Script" uid="uid://bbsr02p0yfin0" path="res://data/quests/quest_data.gd" id="1_3rgxk"]
+[ext_resource type="Script" uid="uid://b5ooyo7pj8m2c" path="res://data/quests/quest_stage_data.gd" id="2_v4eor"]
+
+[sub_resource type="Resource" id="Resource_3rgxk"]
+script = ExtResource("2_v4eor")
+stage_name = "安顿下来"
+hint = "进入宿舍"
+map_marker_ids = Array[String](["第三斋", "陆子晴"])
+metadata/_custom_type_script = "uid://b5ooyo7pj8m2c"
+
+[resource]
+script = ExtResource("1_3rgxk")
+quest_id = "安顿下来"
+title = "安顿下来"
+description = "进入宿舍，和室友认识，并收拾宿舍吧！"
+stages = Array[ExtResource("2_v4eor")]([SubResource("Resource_3rgxk")])
+metadata/_custom_type_script = "uid://bbsr02p0yfin0"

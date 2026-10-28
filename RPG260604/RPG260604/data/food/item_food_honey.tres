@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bc123honey001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://t4cy74r261db" path="res://Sprites/Items/Food/Honey.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+value = 25.0
+icon = ExtResource("1_qh54l")
+id = "food_honey"
+name = "蜂蜜"
+description = "香甜的蜂蜜，恢复25点体力，也可用于烹饪。"
+price = 4
+metadata/_custom_type_script = "uid://oady46xvsj7m"

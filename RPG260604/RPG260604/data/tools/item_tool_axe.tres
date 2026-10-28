@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dm82qf04em77"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://chl3tal0v806j" path="res://Sprites/Items/Tool/Axe.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 4
+max_stack = 1
+icon = ExtResource("1_qh54l")
+id = "tool_axe"
+name = "斧头"
+description = "锋利的斧头，用于砍伐树木和破坏木质障碍物。"
+price = 50
+metadata/_custom_type_script = "uid://oady46xvsj7m"

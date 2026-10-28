@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cv5hs4x653n8s"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txtresilvercup001" path="res://Sprites/Items/Treasure/SilverCup.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+is_consumable = false
+max_stack = 1
+icon = ExtResource("1_qh54l")
+id = "treasure_silver_cup"
+name = "银杯"
+description = "精美的银杯，是珍贵的收藏品。"
+price = 200
+metadata/_custom_type_script = "uid://oady46xvsj7m"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cpcpt1o0t4b81"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txtealeaf001" path="res://Sprites/Items/Food/TeaLeaf.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 0
+is_consumable = true
+value = 15.0
+max_stack = 40
+icon = ExtResource("1_qh54l")
+id = "food_tea_leaf"
+name = "茶叶"
+description = "清香的茶叶，恢复15点体力，可泡茶饮用。"
+price = 3
+metadata/_custom_type_script = "uid://oady46xvsj7m"

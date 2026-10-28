@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://caydqfbubrfv2"
+path="res://.godot/imported/苏婉清.dialogue-7b20dd7d6e66c93056c6b07f21ad7aa6.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/苏婉清.dialogue"
+dest_files=["res://.godot/imported/苏婉清.dialogue-7b20dd7d6e66c93056c6b07f21ad7aa6.tres"]
+
+[params]
+
+defaults=true

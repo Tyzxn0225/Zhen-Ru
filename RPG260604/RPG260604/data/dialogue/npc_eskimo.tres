@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://b60h3vmcu5qou"]
+
+[ext_resource type="Script" uid="uid://kk5n7wr6tkks" path="res://data/dialogue/dialogue_data.gd" id="1_2atkj"]
+[ext_resource type="Texture2D" uid="uid://ds0fg0s2twhtd" path="res://Sprites/Actor/Characters/Eskimo/Faceset.png" id="2_faceset"]
+
+[resource]
+script = ExtResource("1_2atkj")
+npc_name = "Eskimo"
+npc_icom = ExtResource("2_faceset")
+line = Array[String](["Brrr!", "It's cold here."])

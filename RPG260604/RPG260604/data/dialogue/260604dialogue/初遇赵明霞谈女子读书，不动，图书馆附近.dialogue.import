@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b6fh2t2rb41f0"
+path="res://.godot/imported/初遇赵明霞谈女子读书，不动，图书馆附近.dialogue-ddb71d921bd523b9347812d29639d416.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/初遇赵明霞谈女子读书，不动，图书馆附近.dialogue"
+dest_files=["res://.godot/imported/初遇赵明霞谈女子读书，不动，图书馆附近.dialogue-ddb71d921bd523b9347812d29639d416.tres"]
+
+[params]
+
+defaults=true

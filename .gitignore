@@ -1,0 +1,26 @@
+# Godot-generated caches and local build output
+**/.godot/
+**/.mono/
+**/build/
+**/builds/
+
+# Local credentials and environment settings
+**/export_credentials.cfg
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Editor, OS and temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tmp
+*.bak
+*.old
+*.orig
+*.rej
+*.log
+*~
+**/__pycache__/
+*.py[cod]

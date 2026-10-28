@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="QuestData" load_steps=5 format=3 uid="uid://bqx7k2m8n4p6r"]
+
+[ext_resource type="Script" uid="uid://bbsr02p0yfin0" path="res://data/quests/quest_data.gd" id="1_f3fk2"]
+[ext_resource type="Script" uid="uid://b5ooyo7pj8m2c" path="res://data/quests/quest_stage_data.gd" id="2_stage"]
+
+[sub_resource type="Resource" id="Resource_stage1"]
+script = ExtResource("2_stage")
+stage_name = "报到登记"
+hint = "前往第三斋报道"
+map_marker_ids = Array[String](["第三斋", "小雨"])
+
+[sub_resource type="Resource" id="Resource_y5atw"]
+script = ExtResource("2_stage")
+stage_name = "宿舍报道完了"
+hint = "去礼堂见学长学姐"
+map_marker_ids = Array[String](["大礼堂", "学长A"])
+metadata/_custom_type_script = "uid://b5ooyo7pj8m2c"
+
+[resource]
+script = ExtResource("1_f3fk2")
+quest_id = "新生入学"
+title = "新生入学"
+description = "初入校园，先熟悉路线，前往第三斋完成入校登记吧。"
+stages = Array[ExtResource("2_stage")]([SubResource("Resource_stage1"), SubResource("Resource_y5atw")])

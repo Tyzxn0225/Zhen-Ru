@@ -1,0 +1,62 @@
+# 赤鬼 · 烈丸
+# 人物设定：
+#   姓名：烈丸
+#   种族：鬼族（红鬼分支）
+#   性格：傲娇火爆，容易炸毛但讲义气，嘴上不饶人其实很关心同伴
+#   口头禅："烦死了！"
+
+
+~ start
+match GameData.demonred_meet_count
+	when 0:
+		set GameData.demonred_meet_count = 1
+		BlazeMaru: 喂！你看什么看！没见过红皮肤的鬼啊？
+		Player: 我只是路过……
+		BlazeMaru: 路过就路过，盯着人看是很失礼的你不知道吗！
+		BlazeMaru: ……算了，今天心情好不想吵架。快走快走。
+		- 你一个人在这儿做什么？
+			Player: 你一个人在这儿做什么？
+			BlazeMaru: (抱着手臂扭过头去) 要你管？！
+			BlazeMaru: ……好吧，我在等一个人。一个欠我架没打的混蛋。
+			BlazeMaru: 上次那家伙跑了，说好下次一决胜负，结果到现在都没来。
+			=> first_meet_end
+		- 好的我走了
+			Player: 好的我走了。
+			BlazeMaru: 诶等等！算了……你走吧。
+			BlazeMaru: (小声嘀咕) 其实多留一会儿也不是不行……
+			=> first_meet_end
+
+	when 1:
+		set GameData.demonred_meet_count = 2
+		BlazeMaru: 又是你？看起来你也不是那么讨厌。
+		BlazeMaru: 喂，我问你一个问题——你觉得朋友重要还是实力重要？
+		- 朋友重要
+			Player: 朋友重要，有朋友一起变强才有意义。
+			BlazeMaru: (沉默了一会儿) 哼，说得倒好听。
+			BlazeMaru: ……不过我以前也有个朋友，天天跟我打架。那时候还挺开心的。
+			BlazeMaru: 后来他搬家了，再也没见过。啧，跟你说这些干嘛。
+			=> END
+		- 实力重要
+			Player: 实力重要，没有实力什么都保护不了。
+			BlazeMaru: (愣了一下，然后笑起来) 哈！你跟我想的一样！
+			BlazeMaru: 不过你要是没人分享胜利的喜悦……赢再多也挺没劲的。
+			=> END
+
+	else:
+		BlazeMaru: 又来了？你还挺闲的。
+		BlazeMaru: 正好，帮我试吃一下这个——我自己做的鬼族辣酱！
+		- (尝一口) 好辣！
+			Player: (尝了一口) 好辣！！
+			BlazeMaru: (得意) 嘿嘿！我就说吧！这可是我祖传的配方。
+			BlazeMaru: 你要是撑不住就喝水吧，我不笑话你——才怪。
+			=> END
+		- 我不吃辣
+			Player: 我不吃辣……
+			BlazeMaru: 哈？一个大男人不吃辣？
+			BlazeMaru: 算了算了，那就喝点水吧。给你。(递过一杯水)
+			=> END
+
+~ first_meet_end
+BlazeMaru: 你要是碰到一个穿蓝衣服的家伙，告诉他烈丸还在等他！
+BlazeMaru: 烦死了……这么久了还不来。
+=> END

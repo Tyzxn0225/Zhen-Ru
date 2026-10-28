@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://pro001kunai001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txprojectilekunai001" path="res://Sprites/Items/Projectile/Kunai.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+is_consumable = true
+max_stack = 30
+icon = ExtResource("1_qh54l")
+id = "projectile_kunai"
+name = "苦无"
+description = "忍者使用的短柄飞刺，可投掷也可近战。"
+price = 4
+metadata/_custom_type_script = "uid://oady46xvsj7m"

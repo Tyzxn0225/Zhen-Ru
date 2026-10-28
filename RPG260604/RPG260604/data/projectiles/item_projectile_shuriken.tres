@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://pro001shuriken001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txprojectileshuriken001" path="res://Sprites/Items/Projectile/Shuriken.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+is_consumable = true
+max_stack = 30
+icon = ExtResource("1_qh54l")
+id = "projectile_shuriken"
+name = "手里剑"
+description = "忍者使用的投掷武器，锋利无比。"
+price = 5
+metadata/_custom_type_script = "uid://oady46xvsj7m"

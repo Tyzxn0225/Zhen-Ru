@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bvfighterr001"
+path="res://.godot/imported/fighter_red.dialogue-8fd17a4bdc1f3546bd3f3d4050e92ef5.tres"
+
+[deps]
+
+source_file="res://data/dialogue/fighter_red.dialogue"
+dest_files=["res://.godot/imported/fighter_red.dialogue-8fd17a4bdc1f3546bd3f3d4050e92ef5.tres"]
+
+[params]
+
+defaults=true

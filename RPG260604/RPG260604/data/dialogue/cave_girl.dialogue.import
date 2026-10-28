@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bvcavegirl001"
+path="res://.godot/imported/cave_girl.dialogue-fe0aac6b15fbe4c2bcbcf2c02492fcdc.tres"
+
+[deps]
+
+source_file="res://data/dialogue/cave_girl.dialogue"
+dest_files=["res://.godot/imported/cave_girl.dialogue-fe0aac6b15fbe4c2bcbcf2c02492fcdc.tres"]
+
+[params]
+
+defaults=true

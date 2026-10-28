@@ -1,0 +1,63 @@
+~ start
+match GameData.senior_guide_count
+	when 0:
+		set GameData.senior_guide_count = 1
+		Senior: 嘿，你是新生吧？看你在门口看地图，是找不到路吗？
+		- 啊，是的...我有点分不清方向，在找宿舍楼。
+		Senior: 别急，我今天正好没事，带你去吧。走这边。
+		do Refs.current_npc.move_waypoints([Vector2(-88, -480), Vector2(96, -480), Vector2(96, -100)], 80)
+		-啊谢谢！(赶紧跟上去)
+		do Refs.player.story_move_waypoints([Vector2(-88, -700),Vector2(-88, -480), Vector2(96, -480), Vector2(96, -120)], 84)
+		Senior: 我叫林辰，大二计算机系的，叫我学长就行。
+		- 谢谢学长！我叫Player，大一中文系的新生。
+		Senior: 中文系啊，那文商学院楼你以后会常去。
+		Senior: 你看右前方那栋灰色的楼，那就是文商学院，中文系的办公室和部分专业课教室都在里面。
+		- 原来在那里，我记住了。学校好像比我想象中大很多...
+		Senior: 其实熟悉了就不觉得大。左边这栋玻璃幕墙的是理工楼，里面实验室很多。
+		Senior: 我基本天天泡在里面。食堂就在两栋楼之间，一会儿路过你可以看一眼。
+		- 好的，幸好有学长带路，不然我真的会迷路。
+		do Refs.player.wait_for_move()
+		do Refs.current_npc.wait_for_move()
+		Senior: 前面那排红色的建筑就是宿舍区了。你住几号楼？
+		- 我看看...通知书上写的是3号楼。
+		Senior: 3号楼就是中间那栋，很近，走两步就到。
+		- 太感谢了！
+			-太感谢了！今天真的帮了大忙。
+			Senior: 不客气，欢迎来到咱们学校。
+			Senior: 以后有什么不懂的可以随时问我，我一般都在这附近。
+			Senior: 那我就不送你上去了，快去收拾宿舍吧，记得休息一下。
+			- 嗯！学长再见！
+			do Refs.current_npc.move_waypoints([Vector2(96, -280) ], 80)
+			do Refs.current_npc.wait_for_move()
+			=> guide_end
+		- 学长能带我逛逛其他地方吗？
+			Player: 学长能带我逛逛其他地方吗？我想多了解一下学校。
+			Senior: (看了看手表) 现在时间还早，那我带你去图书馆和操场转转吧。
+			Senior: 图书馆在宿舍区后面，环境很好，你以后复习可以去那边。
+			Player: 太好了，我正担心找不到自习的地方呢。
+			Senior: 操场就在图书馆旁边，晚上很多人去跑步。不过今天先不急，改天再细逛。
+			Player: 好！谢谢学长，今天真是麻烦你了。
+			=> guide_end
+
+	when 1:
+		set GameData.senior_guide_count = 2
+		Senior: 哟，小悠，又见面了！宿舍住得还习惯吗？
+		Player: 学长好！还行，就是昨天差点在理工楼迷路了...
+		Senior: (笑) 我就知道。理工楼里面确实绕，回头我画个地图给你。
+		Senior: 对了，你室友都搬进来了吗？
+		Player: 嗯，搬进来了，大家人都挺好的。
+		- 学长也住宿舍吗？
+			Player: 学长也住宿舍吗？
+			Senior: 我住4号楼，就在你隔壁那栋。有事随时找我。
+			Player: 好呀，那以后就请学长多关照了。
+			=> guide_end
+		- 食堂有什么推荐吗？
+			Player: 食堂有什么推荐吗？
+			Senior: 二楼窗口的红烧肉不错，还有一楼的奶茶便宜又好喝。
+			Senior: 等军训完我带你去尝尝。
+			Player: 一言为定！
+			=> guide_end
+~ guide_end
+Player: (心里暖暖的) 这个学长人真好。
+do Refs.current_npc.move_waypoints([Vector2(-88, -480) ], 800)
+=> END

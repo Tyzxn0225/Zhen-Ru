@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cafahyh8jv465"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://tfa5nvtpmise" path="res://Sprites/Items/Food/Shrimp.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+value = 40.0
+icon = ExtResource("1_qh54l")
+id = "food_shrimp"
+name = "烤虾"
+description = "鲜嫩的烤虾，恢复40点体力。"
+price = 8
+metadata/_custom_type_script = "uid://oady46xvsj7m"

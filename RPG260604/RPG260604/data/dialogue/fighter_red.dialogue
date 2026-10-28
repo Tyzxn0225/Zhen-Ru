@@ -1,0 +1,92 @@
+# 红衣斗士 · 赤炎
+# 人物设定：
+#   姓名：赤炎
+#   年龄：28岁
+#   性格：热血耿直，大大咧咧，喜欢逞强但心地善良
+#   背景：流浪的格斗家，曾在各地修行，现在暂居于此养伤
+#   口头禅："再来一回合！"
+
+
+~ start
+match GameData.fighterred_meet_count
+	when 0:
+		set GameData.fighterred_meet_count = 1
+		RedFlame: 喂！那边的小子！你也是来挑战我的吗？
+		Player: 挑战？什么挑战？
+		RedFlame: 哈！看你背着武器，不是来打架的难道是来喝茶的？
+		RedFlame: 我叫赤炎，是个格斗家。最近在这里养伤，无聊得都快长蘑菇了。
+		RedFlame: 来，陪我过两招！我一只手就行！
+		- 好啊，来吧！
+			Player: 好啊，来吧！
+			RedFlame: (眼睛一亮) 有胆量！我喜欢！
+			RedFlame: (摆出战斗姿势，然后突然收手) 等等，我伤还没好……差点忘了。
+			RedFlame: 算了算了，等我伤好了再打。你这份胆量我记住了！
+			=> first_meet_end
+		- 不了，我不想打架
+			Player: 不了，我不想打架。
+			RedFlame: (肩膀一塌) 又一个胆小鬼……
+			RedFlame: 不过你倒是挺诚实的，比那些满嘴大话的家伙顺眼多了。
+			=> first_meet_end
+		- 你受伤了？
+			Player: 你受伤了？还能打吗？
+			RedFlame: (拍了拍缠着绷带的手臂) 小伤！被一头大野猪撞的。
+			RedFlame: 那头野猪也没好到哪去——被我揍得现在见我就跑！
+			RedFlame: ……好吧，其实是互殴。但总之我赢了！
+			=> first_meet_end
+
+	when 1:
+		set GameData.fighterred_meet_count = 2
+		RedFlame: 哟！又见面了！
+		RedFlame: (正在做单手俯卧撑，气喘吁吁) 九十七、九十八、九十九……
+		RedFlame: (跳起来) 三百个！轻轻松松！你要不要也来一发？
+		- 三百？不是九十九吗？
+			Player: 你刚才明明数到九十九……
+			RedFlame: (僵住) 咳，口误口误。从两百开始数的你不知道而已！
+			RedFlame: 不要在意这些细节！强者不拘小节！
+			=> second_meet_end
+		- 你的伤好点了吗
+			Player: 你的伤好点了吗？
+			RedFlame: (活动了一下手臂) 差不多了！再养两天就能全力出拳了。
+			RedFlame: 说实话吧，医生让我静养一个月。但一个月不打架？开什么玩笑！
+			=> second_meet_end
+
+	when 2:
+		set GameData.fighterred_meet_count = 3
+		RedFlame: 嘿，我一直在想一个问题。
+		RedFlame: 你觉得一个人变强是为了什么？
+		RedFlame: 我以前觉得就是为了打赢所有人。但现在想想……
+		RedFlame: 可能保护想保护的人，比打赢所有人更重要吧。
+		- 你说得对
+			Player: 你说得对，保护想保护的人才是真正的强大。
+			RedFlame: (咧嘴一笑) 哈！我就知道你小子能懂。
+			RedFlame: 下次要是有谁欺负你，报我的名字，我帮你揍回来！
+			=> END
+		- 打赢所有人也很重要
+			Player: 打赢所有人也很重要啊，没有实力怎么保护人？
+			RedFlame: 嗯……有道理。不过要是一直想着打赢，会错过很多重要的事。
+			RedFlame: 这是我师傅说的。虽然我当时没听懂，还揍了他一拳……
+			=> END
+
+	else:
+		RedFlame: 来切磋一回合吧！
+		RedFlame: ……开玩笑的，伤还没好。坐会儿聊聊天也行。
+		RedFlame: 你最近有没有遇到什么厉害的对手？
+		- 有，碰到一头大狮子
+			Player: 有，碰到一头大狮子，叫雷牙。
+			RedFlame: (兴奋) 狮子？！在哪儿？带我去！
+			RedFlame: ……等等，那狮子不会刚好住洞窟里吧。上次的野猪就在洞窟碰到的。
+			=> END
+		- 暂时没有
+			Player: 暂时没有。
+			RedFlame: 那太可惜了。不过没关系，我已经物色了好几个对手，伤好了挨个去挑！
+			=> END
+
+~ first_meet_end
+RedFlame: 你叫什么来着？算了，下次再说。
+RedFlame: 记住——等我的伤好了，第一场就找你！
+=> END
+
+~ second_meet_end
+RedFlame: 对了，你要是在野外遇到什么打架的好苗子，记得介绍给我认识！
+RedFlame: 一个人训练太无聊了！强者需要对手！
+=> END

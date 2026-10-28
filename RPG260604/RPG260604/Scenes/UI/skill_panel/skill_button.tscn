@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://b2ylrtxtysa88"]
+
+[ext_resource type="Script" uid="uid://ci1b08tij4kcy" path="res://Scenes/UI/skill_panel/skill_button.gd" id="1_iwihu"]
+[ext_resource type="Texture2D" uid="uid://bweydwh8hi2hw" path="res://Sprites/Ui/Skill Icon/Meteo/Rain.png" id="1_rkhce"]
+[ext_resource type="Texture2D" uid="uid://bop6wxt6vpr3k" path="res://Sprites/Lock.png" id="2_kkbu0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a3ejo"]
+bg_color = Color(0.28627452, 0.30588236, 0.36862746, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkhce"]
+bg_color = Color(0.24041572, 0.2577037, 0.31309524, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kkbu0"]
+bg_color = Color(0.4026113, 0.42672446, 0.5034646, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="SkillButton" type="Button" unique_id=603454415]
+custom_minimum_size = Vector2(50, 50)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a3ejo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rkhce")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kkbu0")
+script = ExtResource("1_iwihu")
+
+[node name="SkillIcon" type="TextureRect" parent="." unique_id=252267322]
+self_modulate = Color(0.36450213, 0.36450222, 0.36450216, 1)
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_rkhce")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Lock" type="TextureRect" parent="." unique_id=447893838]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kkbu0")
+expand_mode = 1
+stretch_mode = 5

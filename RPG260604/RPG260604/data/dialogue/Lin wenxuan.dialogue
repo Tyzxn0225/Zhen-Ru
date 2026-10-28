@@ -1,0 +1,148 @@
+# 1937年·国立暨南大学·真如校区
+# 对话设计说明：
+# 1. 本对话使用了多种非线性调用方式：
+#    - 变量条件判断（if / elif / else）：根据游戏状态变量控制对话走向
+#    - 匹配语句（match）：对同一变量进行多值分支，实现多次相遇的不同对话
+#    - 条件选项 [if ...]：根据游戏状态控制选项的显示与隐藏
+#    - 标题跳转（=> title）：在对话分支中跳转到指定标题，实现循环与回溯
+#    - 状态变量（set / do）：在对话中修改游戏状态，影响后续对话
+# 2. 通过对话侧面展示以下背景信息：
+#    - 时代背景：1937年上海，抗战前夕的校园氛围
+#    - 校园环境：真如校区（参考原校园建筑风格，参见民国大学建筑相关历史文献）
+#    - 学生生活：开学季、课程安排、校园活动
+# 3. 同学人物设定：
+#    - 姓名：林文轩（Lin Wenxuan）
+#    - 年龄：20岁
+#    - 性别：男
+#    - 年级：文学院二年级
+#    - 性格：热心开朗，健谈直率，对校园事务熟悉，关心时局
+
+
+~ start
+# 用 match 语句控制与林文轩第几次见面，展示非线性对话的多状态分支
+match GameData.lin_meeting_count
+	when 0:
+		# 第一次见面
+		set GameData.lin_meeting_count = 1
+		set GameData.has_met_lin = true
+		# 通过环境描写侧面展现1937年真如校园风貌
+		Player: (环顾四周) 这校园比我想象的大多了，找了好一会儿才找到文学院的楼。
+		Lin Wenxuan: 嗨！你是新生吗？我看你拿着入学通知书在找路。
+		Lin Wenxuan: 我叫林文轩，文学院二年级。欢迎来到暨南大学！
+		Lin Wenxuan: 咱们这校园大是大，不过多走几趟就熟了——教学楼在北边，宿舍在东边，操场在中间。
+		Lin Wenxuan: 要是不赶时间，我可以带你四处转转。
+		- 那太好了，麻烦你带我逛逛
+			Player: 那太好了，麻烦你带我逛逛。
+			Lin Wenxuan: 没问题！先带你去看教学楼。咱们学校文、理、法、商、教育五个学院都有自己独立的楼。
+			Lin Wenxuan: 图书馆也很大，藏书丰富得很。对了，你还没告诉我你叫什么名字？
+			- 我叫Player
+				Player: 我叫Player，刚报到完。
+				Lin Wenxuan: Player，好名字。以后有什么不懂的尽管找我。
+				=> first_tour_continue
+			- 叫我小同学就行
+				Player: 叫我小同学就行，名字嘛，以后自然就知道了。
+				Lin Wenxuan: 哈哈，还挺神秘。行，小同学，跟我来。
+				=> first_tour_continue
+		- 不用了，我自己找
+			Player: 不用了，我自己能找到。
+			Lin Wenxuan: 随你。不过提醒你，理学院那边的走廊弯弯绕绕的，新生最容易迷路。
+			Lin Wenxuan: 对了，明天上午在操场有开学典礼，记得准时到。
+			do UIManager.show_timed_hint("学长的提醒", "附近逛逛吧，别迷路了", 5.0)
+			=> END
+			
+
+	when 1:
+		# 第二次见面——开始涉及敏感的时局话题
+		set GameData.lin_meeting_count = 2
+		Lin Wenxuan: 哟，{PlayerName}，又碰见你了！
+		Lin Wenxuan: 上次聊天太匆忙，还没正式介绍。我是文学院二年级的，平时爱泡在图书馆，也爱跟人聊天。
+		Lin Wenxuan: 你刚入学可能还不知道——咱们这个学期有点特殊。
+		Lin Wenxuan: 外面局势越来越紧张了，北边炮声一响，上海这边也跟着人心惶惶的。
+		- 局势？外面出什么事了？
+			Player: 局势？外面出什么事了？
+			Lin Wenxuan: 你还不知道？卢沟桥那边打起来了，日本军队已经开到了北平城外。
+			Lin Wenxuan: 咱们学校也在做准备，听说理学院已经开始把重要仪器装箱了，以防万一。
+			Lin Wenxuan: 不过校长说课照常上，咱们做学生的，先把书读好。
+			=> second_meet_end
+		- 我对这些不感兴趣，只想好好读书
+			# 选项带条件：仅当玩家尚未表达过不爱谈论时局的倾向时显示
+			[if not GameData.lin_avoids_politics]
+			Player: 我对这些不感兴趣，只想好好读书。
+			Lin Wenxuan: (稍显意外) 也是，读书人的本分嘛。不过身在这个时代，有些事不是你想躲就能躲得开的。
+			set GameData.lin_avoids_politics = true
+			=> second_meet_end
+		- 你觉得学校会停课吗？
+			# 选项带条件：仅当玩家尚未表达过担忧停课的倾向时显示
+			[if not GameData.lin_worried]
+			Player: 你觉得学校会停课吗？
+			Lin Wenxuan: 这个不好说。不过听说校方已经未雨绸缪，在跟租界那边联系备用校舍了。
+			Lin Wenxuan: 真要有那么一天，咱们可能就得搬到租界去上课。
+			set GameData.lin_worried = true
+			=> second_meet_end
+
+	when 2:
+		# 第三次见面——开始涉及更具体的校园与时代结合的信息
+		# 条件判断分支：根据玩家与林文轩的对话历史呈现不同问候
+		if GameData.lin_avoids_politics:
+			Lin Wenxuan: {PlayerName}，上次你说不想谈时局，那咱们今天聊点轻松的。
+		elif GameData.lin_worried:
+			Lin Wenxuan: {PlayerName}，还在担心停课的事吗？船到桥头自然直。
+		else:
+			Lin Wenxuan: {PlayerName}，又见面了。最近校园里气氛越来越不一样了，你感觉到了吗？
+		Lin Wenxuan: 对了，咱们校园你逛得差不多了吧？操场边上那座白色的理学院楼可是校区的标志。
+		Lin Wenxuan: 听说那楼是十多年前建的，当时还请了外国建筑师，说是中西结合的风格。
+		- 校园很美，可惜上海最近不太平静
+			Player: 校园很美，可惜上海最近不太平静。
+			Lin Wenxuan: 是啊，1937年，不知会在大上海的版图上留下怎样的一笔。
+			=> END
+		- 我对中西合璧的建筑很感兴趣
+			Player: 我对中西合璧的建筑很感兴趣，能再讲讲吗？
+			Lin Wenxuan: 那你真来对地方了。咱们暨南园子里，这样的楼有好几栋，中西合璧，既实用又好看。
+			=> END
+		- 你平时课余喜欢做些什么？
+			Player: 你平时课余喜欢做些什么？
+			Lin Wenxuan: 我啊，最喜欢去操场看足球赛。咱们校队连续九年拿了江南赛区冠军，可厉害了。
+			Lin Wenxuan: 不过现在这种时局，不知道今年的联赛还能不能如期举行。
+			=> END
+
+	else:
+		# 后续见面通用对话
+		if not GameData.lin_mentioned_club:
+			Lin Wenxuan: {PlayerName}，最近有没有什么新鲜事？哦对了，咱们文学院的历史研究会每周三晚上都有讲座，你感兴趣的话可以来听听。
+			set GameData.lin_mentioned_club = true
+		else:
+			Lin Wenxuan: {PlayerName}，看你最近适应得不错嘛！在校园里都能自己摸清路了。
+		Lin Wenxuan: 对了，你报到的时候去过图书馆没有？那儿的藏书在上海的高校里可是数得着的。
+		- 去过了，确实很棒
+			Player: 去过了，确实很棒。
+			Lin Wenxuan: 那你可以多去泡泡。鲁迅先生之前还来咱们学校讲过学呢。
+			=> END
+		- 还没去过，有推荐的书吗？
+			Player: 还没去过，有推荐的书吗？
+			Lin Wenxuan: 看你读什么专业了。文学院的肯定推荐郑振铎先生的文章，他可是我们文学院的院长。
+			=> END
+
+~ first_tour_continue
+Lin Wenxuan: 先到操场这边看看。这儿是全校最热闹的地方，足球赛的时候人山人海。
+Lin Wenxuan: 那边白色的小楼是暨南新村，好几位教授都住那儿。再往北走就是理学院的科学馆，楼顶还有个圆形的观测台，在咱们这种校园里算是很特别的建筑了。
+Lin Wenxuan: 对了，明天上午在操场举行开学典礼，别忘了。你还有什么想问的吗？
+- 你平时喜欢做什么？
+	Player: 你平时喜欢做什么？
+	Lin Wenxuan: 我啊，最爱泡图书馆。咱们图书馆的书多得看不过来，郑振铎先生、蔡元培先生都在这里讲过学或做过研究。
+	Lin Wenxuan: 另外我还参加了历史研究会，大家经常一起讨论外面的事。
+	=> END
+- 这个校园安全吗？
+	Player: 这个校园安全吗？我听说上海最近不太平静。
+	Lin Wenxuan: (微微一顿) 说实话，北边已经打起来了，谁也不知道什么时候会波及到这里。
+	Lin Wenxuan: 不过学校有安排，真出了事会组织大家疏散的。咱们做学生的，先把书读好，但也得留个心眼。
+	Lin Wenxuan: 总之，欢迎来到暨南大学。在这样的年月里还能开学，本身就是一件了不起的事。
+	=> END
+- 没什么了，谢谢
+	Player: 没什么了，谢谢学长！
+	Lin Wenxuan: 别客气，以后有事随时找我。
+	=> END
+
+~ second_meet_end
+Lin Wenxuan: 反正课还是要上的。咱们学生嘛，把书读好就是对国家最大的贡献。
+Lin Wenxuan: 行了，我还有课，先走了。回头见！
+=> END

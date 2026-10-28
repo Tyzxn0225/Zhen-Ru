@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cvpx5xl0sbwoe"
+path="res://.godot/imported/103 to box.dialogue-28d3051011a71547abcdb7d125c13c31.tres"
+
+[deps]
+
+source_file="res://data/dialogue/103 to box.dialogue"
+dest_files=["res://.godot/imported/103 to box.dialogue-28d3051011a71547abcdb7d125c13c31.tres"]
+
+[params]
+
+defaults=true

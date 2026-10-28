@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://scr001fire001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txscrollfire001" path="res://Sprites/Items/Scroll/ScrollFire.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 3
+is_consumable = true
+value = 15.0
+max_stack = 10
+icon = ExtResource("1_qh54l")
+id = "scroll_fire"
+name = "火焰卷轴"
+description = "记载着火焰魔法的卷轴，使用后可释放火球术攻击敌人。"
+price = 30
+metadata/_custom_type_script = "uid://oady46xvsj7m"

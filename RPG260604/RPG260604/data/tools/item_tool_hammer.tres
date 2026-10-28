@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://tool001hammer001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txtoolhammer001" path="res://Sprites/Items/Tool/Hammer.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+is_consumable = false
+max_stack = 1
+icon = ExtResource("1_qh54l")
+id = "tool_hammer"
+name = "锤子"
+description = "沉重的锤子，用于锻造和修理装备。"
+price = 40
+metadata/_custom_type_script = "uid://oady46xvsj7m"

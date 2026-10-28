@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://byvyl770xic8g"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txseedbig1001" path="res://Sprites/Items/Food/SeedBig1.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+is_consumable = false
+max_stack = 30
+icon = ExtResource("1_qh54l")
+id = "resource_seed_big1"
+name = "果树种子"
+description = "可以种植果树的种子。"
+price = 5
+metadata/_custom_type_script = "uid://oady46xvsj7m"

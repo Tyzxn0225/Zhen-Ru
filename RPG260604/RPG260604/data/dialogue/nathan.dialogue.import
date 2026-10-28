@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ct40l1l82n4pv"
+path="res://.godot/imported/nathan.dialogue-c2d12b417ecb1457630088e321da61e9.tres"
+
+[deps]
+
+source_file="res://data/dialogue/nathan.dialogue"
+dest_files=["res://.godot/imported/nathan.dialogue-c2d12b417ecb1457630088e321da61e9.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://pro001caltrop001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txprojectilecaltrop001" path="res://Sprites/Items/Projectile/Caltrop.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+is_consumable = true
+max_stack = 20
+icon = ExtResource("1_qh54l")
+id = "projectile_caltrop"
+name = "铁蒺藜"
+description = "带刺的铁蒺藜，可放置在地面伤害敌人。"
+price = 8
+metadata/_custom_type_script = "uid://oady46xvsj7m"

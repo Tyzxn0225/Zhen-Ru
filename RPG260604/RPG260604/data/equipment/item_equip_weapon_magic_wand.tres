@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://dlpwg61uhptd5"]
+
+[ext_resource type="Texture2D" uid="uid://txweaponmagicwand001" path="res://Sprites/Items/Weapons/MagicWand/Sprite.png" id="1_h3cka"]
+[ext_resource type="Script" uid="uid://bs00b1lhbq4pj" path="res://data/equipment/equip_data.gd" id="2_wbqny"]
+
+[resource]
+script = ExtResource("2_wbqny")
+equip_type = 3
+type = 4
+max_stack = 1
+icon = ExtResource("1_h3cka")
+id = "equip_weapon_magic_wand"
+name = "魔法杖"
+description = "蕴含魔力的法杖，适合施法者使用。"
+price = 90
+metadata/_custom_type_script = "uid://bs00b1lhbq4pj"

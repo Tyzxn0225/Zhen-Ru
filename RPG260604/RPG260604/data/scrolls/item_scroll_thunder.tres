@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://scr001thunder001"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txscrollthunder001" path="res://Sprites/Items/Scroll/ScrollThunder.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 3
+is_consumable = true
+value = 20.0
+max_stack = 10
+icon = ExtResource("1_qh54l")
+id = "scroll_thunder"
+name = "雷电卷轴"
+description = "记载着雷电魔法的卷轴，使用后可释放闪电攻击敌人。"
+price = 40
+metadata/_custom_type_script = "uid://oady46xvsj7m"

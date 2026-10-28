@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cafaidi7f8465"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txsushi2001" path="res://Sprites/Items/Food/Sushi2.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 0
+is_consumable = true
+value = 60.0
+max_stack = 15
+icon = ExtResource("1_qh54l")
+id = "food_sushi2"
+name = "高级寿司"
+description = "精心制作的高级寿司，恢复60点体力。"
+price = 15
+metadata/_custom_type_script = "uid://oady46xvsj7m"

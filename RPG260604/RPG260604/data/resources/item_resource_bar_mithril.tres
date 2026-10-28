@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bvjr0iah8h6sa"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txbarmithril001" path="res://Sprites/Items/Resource/BarMithril.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+is_consumable = false
+max_stack = 20
+icon = ExtResource("1_qh54l")
+id = "resource_bar_mithril"
+name = "秘银锭"
+description = "稀有的秘银金属锭，用于打造高级装备。"
+price = 200
+metadata/_custom_type_script = "uid://oady46xvsj7m"

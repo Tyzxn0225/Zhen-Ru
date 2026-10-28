@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://61ebloin1d1m"
+path="res://.godot/imported/闹鬼引入，男女都可，动，宿舍外广场，.dialogue-0f7450a3faddf72304d918360b14337d.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/闹鬼引入，男女都可，动，宿舍外广场，.dialogue"
+dest_files=["res://.godot/imported/闹鬼引入，男女都可，动，宿舍外广场，.dialogue-0f7450a3faddf72304d918360b14337d.tres"]
+
+[params]
+
+defaults=true

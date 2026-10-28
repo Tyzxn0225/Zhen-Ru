@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bl6cbgr8pgoif"
+path="res://.godot/imported/法国学生学习，金发男，不动，图书馆前.dialogue-b9b7ea36086a2bebbab7e7654f2e4d5e.tres"
+
+[deps]
+
+source_file="res://data/dialogue/260604dialogue/法国学生学习，金发男，不动，图书馆前.dialogue"
+dest_files=["res://.godot/imported/法国学生学习，金发男，不动，图书馆前.dialogue-b9b7ea36086a2bebbab7e7654f2e4d5e.tres"]
+
+[params]
+
+defaults=true

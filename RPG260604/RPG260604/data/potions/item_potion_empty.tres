@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c2xjerjploups"]
+
+[ext_resource type="Script" uid="uid://oady46xvsj7m" path="res://data/item_data.gd" id="1_24sjb"]
+[ext_resource type="Texture2D" uid="uid://txemptypot001" path="res://Sprites/Items/Potion/EmptyPot.png" id="1_qh54l"]
+
+[resource]
+script = ExtResource("1_24sjb")
+type = 1
+is_consumable = false
+max_stack = 20
+icon = ExtResource("1_qh54l")
+id = "potion_empty"
+name = "空药瓶"
+description = "一个空的药水瓶，可用于制作药水。"
+price = 2
+metadata/_custom_type_script = "uid://oady46xvsj7m"

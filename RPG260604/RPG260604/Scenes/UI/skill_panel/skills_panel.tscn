@@ -1,0 +1,109 @@
+[gd_scene load_steps=3 format=3 uid="uid://wru2e76yavx6"]
+
+[ext_resource type="PackedScene" uid="uid://b2ylrtxtysa88" path="res://Scenes/UI/skill_panel/skill_button.tscn" id="1_gwbff"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1xeu"]
+bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.101960786, 0.11372549, 0.14901961, 1)
+shadow_size = 2
+shadow_offset = Vector2(4, 4)
+
+[node name="SkillsPanel" type="PanelContainer"]
+custom_minimum_size = Vector2(215, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_t1xeu")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBox"]
+layout_mode = 2
+text = "日志"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBox"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.8666667, 0.8666667, 0.8666667, 0.14901961)
+
+[node name="Space" type="Control" parent="MarginContainer/VBox"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBox"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SkillButton2" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer" instance=ExtResource("1_gwbff")]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SkillButton2" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer2" instance=ExtResource("1_gwbff")]
+layout_mode = 2
+
+[node name="Space2" type="Control" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(74, 10)
+layout_mode = 2
+
+[node name="SkillButton3" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer2" instance=ExtResource("1_gwbff")]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="SkillButton2" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer3" instance=ExtResource("1_gwbff")]
+layout_mode = 2
+
+[node name="SkillButton3" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer3" instance=ExtResource("1_gwbff")]
+layout_mode = 2
+
+[node name="SkillButton4" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer3" instance=ExtResource("1_gwbff")]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SkillButton2" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer4" instance=ExtResource("1_gwbff")]
+layout_mode = 2
+
+[node name="Space2" type="Control" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(74, 10)
+layout_mode = 2
+
+[node name="SkillButton3" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer4" instance=ExtResource("1_gwbff")]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="SkillButton2" parent="MarginContainer/VBox/VBoxContainer/HBoxContainer5" instance=ExtResource("1_gwbff")]
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="MarginContainer/VBox"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.8666667, 0.8666667, 0.8666667, 0.14901961)

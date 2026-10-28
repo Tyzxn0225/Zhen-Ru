@@ -1,0 +1,169 @@
+~ start
+match GameData.陈景明_meet_count
+	when == 0
+		set GameData.陈景明_meet_count = 1
+		do Refs.get_npc_by_name("学长A").face_direction("down") 
+		Player: 糟糕，门已经关了……我该怎么进去呢？
+		- 问问那边两位吧。
+		学长: 啊————报社的活也太多了，要是能抓个苦力就好了。
+		学姐: 少抱怨多做事，记得回去改文章。
+		do Refs.get_npc_by_name("学长A").release_face_direction()
+		
+		学长: 哎，同学，看这清澈的眼神……你是暨南的新生？
+		do Refs.get_npc_by_name("学姐A").face_direction("left") 
+		学姐: 昨天就结束新生报到了。怎么这个时间才来？
+		- 哎，抱歉，我有事来晚了，门卫把大门锁了……正犹豫要不要叫门。
+		- 嗯，刚到，正在想该怎么办。
+		学长: 这样啊，那你跟着我们进去吧，就说是我们报社新来的，跟着出去采访刚回来。老张叔不会为难的。
+		do Refs.get_npc_by_name("学姐A").face_direction("up") 
+		学姐: ……这不合程序。
+		学长: 先让人家进去再说呗
+		do Refs.current_npc.move_waypoints([Vector2(438, 630)], 60)
+		do Refs.player.story_move_waypoints([Vector2(418, 630)], 60)
+		do EventBus.request_npc_story_move("学姐A", [Vector2(438, 650)], 30)
+		do Refs.current_npc.wait_for_move()
+		学姐: 总是这样……
+		学长: 老张叔！老张叔！我们报社这几个刚采访回来，还有个新来的小同学，麻烦开开门！
+		do EventBus.request_npc_story_move("警卫老张", [Vector2(402, 600)], 101)
+		do Refs.get_npc_by_name("警卫老张").wait_for_move()
+		警卫: 来了来了……报社的？怎么这个点才回来？
+		学长: 嗨，采访耽搁了，是吧婉清？
+		学姐: …………[wait=1]临时多跑了一个地方。
+		do EventBus.request_anim("AnimaDoor", "open")
+		警卫: 哎，进来吧，下次可要赶早。
+		- 谢谢警卫大叔，谢谢学长学姐。
+		学长: 麻烦了，老张叔！
+		do Refs.current_npc.move_waypoints([Vector2(422, 546),Vector2(310, 546)], 100)
+		学长: 赶紧进来吧！
+		- 谢谢……麻烦你们了。
+		do Refs.player.story_move_waypoints([Vector2(438, 630),Vector2(422, 546),Vector2(330, 546)], 101)
+		do EventBus.request_npc_story_move("学姐A", [Vector2(422, 566),Vector2(330, 566)], 70)
+		do Refs.get_npc_by_name("学姐A").release_face_direction()
+		do Refs.current_npc.wait_for_move()
+		do Refs.player.wait_for_move()
+		学长: 还没自我介绍，我叫陈景明，大二商科的
+		陈景明: 我平时在校园报社跑跑腿，偶尔也去图书馆帮忙。
+		do EventBus.request_anim("AnimaDoor", "clo")
+		学姐: 苏婉清，大二，校园报社。刚才的事，下不为例。
+		- 学长好！学姐好！我叫 Player，大一中文系的新生。
+		陈景明: 我和婉清为下期校报取材，刚从校外回来。
+		陈景明: 没想到还遇到了新生。你也是运气好，不然天知道你得等多久
+		- 多亏学长学姐了，不如我来报社给你们帮忙吧，就当报答你们了。
+		陈景明: 好啊！刚好报社最近正缺人手，婉清一个人顶两个用，我也被她使唤得够呛。
+		do Refs.get_npc_by_name("学姐A").face_direction("up") 
+		苏婉清: 别抱怨了，学妹愿意给你帮忙就不错了。既然这样，你带她熟悉一下校园吧。
+		do Refs.get_npc_by_name("学姐A").release_face_direction()
+		陈景明: 好好好，我会给她地图的。Player学妹，你的宿舍在哪，我带你过去吧？
+		- 那就麻烦学长了！
+			Player: 那就麻烦学长了！通知书上写的宿舍在第三斋。
+			苏婉清: 报社还有事，我先走了。
+			- 学姐再见。
+			do EventBus.request_npc_story_move("学姐A",[Refs.get_npc_by_name("学姐A").global_position + Vector2(300, 0)], 100)
+			陈景明: 我给你说，婉清她就是刀子嘴豆腐心。
+			=> guide_start
+		- 不用了，我自己可以的
+			Player: 不用了，我自己慢慢找就好，不想太麻烦学长。
+			陈景明: 哎，真的不需要吗？现在的孩子也太独立了。
+			Player: 嗨，学长过奖了。那我什么时候去报社报道呢。
+			陈景明: 不用报道！你现在已经是见习社员了！直接去收集校园故事就好了。收集得多了会给你升职噢！
+			do QuestSystem.接取任务("入职报社")
+			do UIManager.show_timed_hint("接取任务","入职报社，可点击任务栏查看",5.0)
+			苏婉清: 报社还有事，我先走了。
+			- 学姐再见。
+			陈景明: 我给你说，婉清她就是刀子嘴豆腐心
+			do EventBus.request_npc_story_move("学姐A",[Refs.get_npc_by_name("学姐A").global_position + Vector2(300, 0)], 100)
+			陈景明: 来来来Player同学。给你看个好东西。
+			=> map
+
+	when == 1
+		set GameData.陈景明_meet_count = 1
+		陈景明: 这期报纸的排版感觉还得再调调......
+		=> END
+
+
+
+~ guide_start
+陈景明: 走吧，你宿舍离这儿还有好一段路。
+do Refs.current_npc.move_waypoints([Vector2(90, 122),Vector2(90, -362)], 80)
+do Refs.player.story_move_waypoints([Vector2(310, 566),Vector2(90, 122),Vector2(90, -342)], 80)
+陈景明: 你看，从校门进来这一大片都是草坪，看着空旷，开春以后常有同学在这儿坐着看书聊天，这是学校里最松快的地方。
+陈景明: 上回商学院的足球队跟法学院在这儿踢了一场野球赛，草坪边上围了三圈人，结果把路都给堵了，闹了好大一场风波。
+- 这么热闹？学校的足球风气很盛啊。
+	Player: 这么热闹？学校的足球风气很盛啊。
+	陈景明: 可不是嘛。东角那个正经足球场才是他们的地盘，校队天天在那儿操练，下午哨子声隔老远都听得见。你有空也可以去那儿逛逛，足球队那群人热情得很。
+	陈景明: 天气好的时候，有带午饭来这儿吃的，有躺草地上晒太阳的，也有拿了书来读的，一坐就是一下午。你要是哪天在宿舍闷了，来这儿坐坐准没错。
+	- 听起来真不错，我以后一定常来。
+		Player: 听起来真不错，我以后一定常来。
+		陈景明: 那你很快就会交到朋友的。在这儿待久了，总有认识的人从面前经过，打个招呼聊几句，一下午就过去了。
+	- 嗯。
+- （只是点点头，默默听着）
+陈景明: 咱们学校建校有年头了，这些楼都是红砖墙配黑瓦屋顶，
+陈景明: 那时候特意请了建筑师，把中式大屋顶搁在西式楼身上，看着又稳重又不老气。
+陈景明: 你知道洪年图书馆吧？就在你宿舍南边不远，也是这个风格。
+- 洪年图书馆？名字倒挺特别的。
+	Player: 洪年图书馆？名字倒挺特别的。
+	陈景明: 为了纪念郑洪年校长,这图书馆是他捐资兴建的。那栋楼跟右手边这栋理工楼同一年落成的，算起来是民国十八年的事了，两栋楼赶在一块儿完工，当时在校园里也算是件大事。
+	Player: 原来是这样，难怪走在校园里总觉得有点不一样。
+	陈景明: 说到图书馆，里面有几本早年的校刊合订本，上面登了不少建校初期的旧闻，翻翻还挺有意思的。馆长一直想多招几个学生去帮忙整理书目，可惜人手老是不够，我有时候去顶个班，一待就是大半天。
+	- 学长在图书馆帮忙？那一定看了不少书吧。
+		Player: 学长在图书馆帮忙？那一定看了不少书吧。
+		陈景明: 嘿嘿，说实话，整理书目的时候多，真正坐下看书的时候少。不过偶尔翻到有趣的旧文章，也会忍不住多读几页。
+	- 要不我也去图书馆帮帮忙吧。
+		Player: 要不我也去图书馆帮帮忙吧。
+		陈景明: 嗨！报社的事就够你跑的了，不过————馆长肯定欢迎你去帮忙。有空可以去看看。
+		do QuestSystem.接取任务("去图书馆帮忙")
+		do UIManager.show_timed_hint("接取任务","去图书馆帮忙，可点击任务栏查看",5.0)
+- （安静地听着）
+	Player: （安静地听着，没有插话）
+陈景明: 学妹别嫌我话多啊，等你待久了，自己也能攒一肚子故事。咱们接着往前。
+Player: 学长不也才大二吗，一年就能有这么多趣事吗？
+陈景明: 那当然！你暨南大学可是底蕴深厚又充满活力的。
+do Refs.player.wait_for_move()
+do Refs.current_npc.wait_for_move()
+陈景明: 右手边这栋就是理工楼，里面实验室多，走廊岔路也多。
+do Refs.player.story_move_waypoints([Vector2(96, -660)], 80)
+do Refs.current_npc.move_waypoints([Vector2(96, -680)], 80)
+陈景明: 新来的稍不留神就走岔了。你以后要是来这边，记得多留意拐角。
+Player: 记住了，实在不行我会张嘴问的。
+陈景明: 也是，你今天这不就问到我这种好人了。
+陈景明: 再往上走，看到前面那个十字路口没有？咱们就快到了。
+陈景明: 你看路口左手边这栋红砖楼，就是宿舍区了。
+do Refs.player.wait_for_move()
+陈景明: 到了，第三斋就是挨着路口这栋，最方便的位置。右手边那片空地过去就是文商学院的院子，你以后上课走几步就到。
+- 谢谢学长！
+	Player: 谢谢学长！
+	Player: 那我什么时候去报社报道呢。
+	陈景明: 不用报道！你现在已经是见习社员了！直接去收集校园故事就好了。收集得多了会给你升职噢！
+	do QuestSystem.接取任务("入职报社")
+	do UIManager.show_timed_hint("接取任务","入职报社，可点击任务栏查看",5.0)
+=> map
+
+
+~ guide_end
+do Refs.current_npc.move_waypoints([Vector2(-88, -480)], 800)
+=> END
+
+~ map
+陈景明: （从怀里掏出一张折了好几折的纸）
+陈景明: 给你附赠一张我们报社下期要出版的校园地图，还是草样，画得有些潦草，但主要地方都标了。你先拿着凑合看。
+- 太感谢了！
+	Player: 好些地方画得看不太清……
+	陈景明: 咳咳，都说了是草样嘛，你再仔细辨认一下？
+	set GameData.pending_dialogue_resource_path = "res://data/dialogue/陈景明.dialogue"
+	set GameData.pending_dialogue_title = "map_return"
+	do UIManager.switch_scene_with_transition("res://Microgame/Games/Game2PuzzleMap/scenes/ui/StartMenu2.tscn",null,"")
+	=> END
+	# 此处插入拼图小游戏：玩家需将地图碎片拼接完整后方可继续
+	# 游戏完成后res://Microgame/puzzle-map/scenes/game/GameScene.tscn
+	~ map_return
+	Player: 原来是这样，现在看得懂了！
+	陈景明: 那就好。我就不继续送你了，快去收拾收拾，安顿下来好好歇口气。
+	do QuestSystem.接取任务("安顿下来")
+	do UIManager.show_timed_hint("接取任务","安顿下来，可点击任务栏查看",5.0)
+	陈景明: 以后有什么不懂的随时来问，我不是在图书馆就是在报社，好找得很。那我先走了。
+	- 嗯！学长再见！
+		Player: （把地图小心收好，心里暖洋洋的）
+		do UIManager.show_timed_hint("获得地图",5.0)
+		do Refs.current_npc.move_waypoints([Refs.current_npc.global_position + Vector2(300, 0)], 150)
+		do Refs.current_npc.wait_for_move()
+		=> END

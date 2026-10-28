@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="QuestData" load_steps=5 format=3 uid="uid://d1yewuuyd4aup"]
+
+[ext_resource type="Script" uid="uid://bbsr02p0yfin0" path="res://data/quests/quest_data.gd" id="1_l6yiu"]
+[ext_resource type="Script" uid="uid://b5ooyo7pj8m2c" path="res://data/quests/quest_stage_data.gd" id="2_qvuh2"]
+
+[sub_resource type="Resource" id="Resource_l6yiu"]
+script = ExtResource("2_qvuh2")
+stage_name = "测试阶段1"
+hint = "22办公所莲韬馆"
+map_marker_id = "办公所莲韬馆"
+metadata/_custom_type_script = "uid://b5ooyo7pj8m2c"
+
+[sub_resource type="Resource" id="Resource_qvuh2"]
+script = ExtResource("2_qvuh2")
+stage_name = "2"
+hint = "试一试2。2文商"
+map_marker_id = "大礼堂"
+metadata/_custom_type_script = "uid://b5ooyo7pj8m2c"
+
+[resource]
+script = ExtResource("1_l6yiu")
+quest_id = "测试任务2"
+title = "测试测试测试一下"
+description = "试一下测试"
+stages = Array[ExtResource("2_qvuh2")]([SubResource("Resource_l6yiu"), SubResource("Resource_qvuh2")])
+metadata/_custom_type_script = "uid://bbsr02p0yfin0"
